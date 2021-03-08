@@ -1,8 +1,45 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          light: '#006ee6',
+          dark: '#0055b3'
+        },
+        onLight: '#20233c',
+        onDark: '#dbdde0',
+        surface: {
+          light: '#fff',
+          dark: '#2C3E50'
+        },
+        // ...colors,
+        gray: colors.blueGray,
+        fuchsia: colors.fuchsia,
+        purple: colors.purple,
+        violet: colors.violet,
+        indigo: colors.indigo,
+        blue: colors.blue,
+        cyan: colors.cyan,
+        teal: colors.teal,
+        emerald: colors.emerald,
+        green: colors.green,
+        lime: colors.lime,
+        yellow: colors.yellow,
+        amber: colors.amber,
+        orange: colors.orange,
+        red: colors.red,
+
+      },
+      spacing: {
+        '1/2': '50%',
+        '1/3': '33.333333%',
+        '2/3': '66.666667%',
+      }
+    },
   },
   variants: {
     extend: {
@@ -10,6 +47,6 @@ module.exports = {
       ringWidth: ['focus-visible'],
     },
   },
-  
+
   plugins: [],
 }

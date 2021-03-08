@@ -1,4 +1,7 @@
 export default {
+  
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'railab.etch',
@@ -13,10 +16,17 @@ export default {
     script: [
       { src: '/scripts/focus-visible.min.js', async: true, defer: true }
     ],
+    // 
+    bodyAttrs: {
+      class: [
+        'bg-surface-light text-onLight dark:bg-surface-dark dark:text-onDark transition-colors duration-300 ease-linear'
+      ]
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -25,20 +35,25 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/stylelint
-    // '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    // 'nuxt-vite',
+    
   ],
+  // vite:{
+  //   publicDir:'<root>/static'
+  // },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
+    'nuxt-i18n'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -59,4 +74,6 @@ export default {
       'postcss-focus-visible': {}
     }
   },
+
+  i18n: {},
 }

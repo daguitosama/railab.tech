@@ -1,0 +1,62 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* transitions */
+
+/* fade */
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.15s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+/* fade-from-up */
+
+.fade-from-up-enter-active, .fade-from-up-leave-active {
+    transition: all 0.15s;
+}
+
+.fade-from-up-enter, .fade-from-up-leave-to {
+    opacity: 0;
+    margin-top: -5rem;
+}
+
+/* PAGE */
+
+.page-enter-active, .page-leave-active {
+    transition: all 0.3s;
+}
+
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+/* Layout */
+
+.layout-enter-active, .layout-leave-active {
+    transition: all 0.3s
+}
+
+.layout-enter, .layout-leave-active {
+    opacity: 0
+}
+
+/* IOS INPPUTs SHADOW RESET */
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    -webkit-appearance: none;
+}
+
+.blured-5 {
+    backdrop-filter: blur(10px);
+}
+
+/* made clases */
+
+.container{
+    @apply max-w-screen-lg mx-auto px-6 md:px-8 xl:px-0;
+}
