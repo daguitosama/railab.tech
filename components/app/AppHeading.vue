@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 md:mt-20 lg:mt-24 font-extrabold text-5xl">
+  <div class="mt-20 lg:mt-24 font-extrabold text-4xl">
     <h1
       v-if="!sectionHeadingId"
     >

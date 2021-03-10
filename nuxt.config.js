@@ -52,6 +52,9 @@ export default {
   // vite:{
   //   publicDir:'<root>/static'
   // },
+  colorMode: {
+    classSuffix: ''
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

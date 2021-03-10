@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
+  <div >
+    <div class="container">
     <SectionIntro />
     <ServiceItemList />
     <SectionTelegram />
     <SectionSello />
+    </div>
     <ContactShorcut/>
   </div>
 </template>

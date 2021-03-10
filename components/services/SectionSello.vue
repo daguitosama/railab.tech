@@ -1,27 +1,27 @@
 <template>
-  <section>
+  <section class="text-center flex flex-col items-center">
     <AppHeading class="max-w-md" :sectionHeading="sectionHeading" />
     <div class="mt-20">
       <div
         class="w-16 h-16 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center from-blue-400 to-blue-800"
       >
         <Plane
-          :title="Plane"
+          title="Plane"
           class="text-white fill-current transform rotate-45 ml-2 mb-1"
         />
       </div>
     </div>
 
-    <div class="mt-10 opacity-75 max-w-md">
-      <p class="text-lg  ">{{ description.paragraph1 }}</p>
-      <ul class="mt-2 ml-4 text-lg list-disc">
+    <div class="mt-10  max-w-md">
+      <p class="text-lg  opacity-75">{{ description.paragraph1 }}</p>
+      <ul class="mt-2 ml-4 text-lg ">
         <li v-for="(e, i) in description.list1" :key="i">
           {{ e }}
         </li>
       </ul>
 
-      <p class="text-lg mt-10 ">{{ description.paragraph2 }}</p>
-      <ul class="mt-2 ml-4 text-lg list-disc">
+      <p class="text-lg mt-10 opacity-75">{{ description.paragraph2 }}</p>
+      <ul class="mt-2 ml-4 text-lg ">
         <li v-for="(e, i) in description.list2" :key="i">
           {{ e }}
         </li>

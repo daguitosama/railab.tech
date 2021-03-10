@@ -21,7 +21,7 @@
         >
       </div>
     </div>
-    <div class="hidden md:flex w-3/4  ">
+    <div class="hidden md:flex w-2/4  ">
       <div class=" pb-2/3 relative w-full">
         <img src="/img/macbook-air-black.png" alt="" class="absolute top-10 object-cover  w-full  "/>
       </div>
