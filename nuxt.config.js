@@ -62,6 +62,32 @@ export default {
     // '@nuxtjs/pwa',
     'nuxt-i18n'
   ],
+  // i18n
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English',
+      },
+      {
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es-ES.js',
+        name: 'Español',
+      }
+    ],
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    defaultLocale: 'es',
+    parsePages: false,
+    detectBrowserLanguage: false,
+    seo: false,
+    lazy: true,
+    langDir: 'i18n/'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   // pwa: {
@@ -82,5 +108,4 @@ export default {
     }
   },
 
-  i18n: {},
 }

@@ -14,8 +14,11 @@
           <li class="opacity-70">Store</li>
           <li class="opacity-70">Contact</li>
         </ul>
-        <div class="hidden md:block">
+        <div class="hidden md:flex space-x-2">
           <ColorModeCtrl />
+          <div class="w-8 h-8">
+            <AppLangSwitcher  />
+          </div>
         </div>
       </nav>
     </header>
@@ -25,11 +28,13 @@
 <script>
 import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
+import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 
 export default {
   components: {
     Logo,
     ColorModeCtrl,
+    AppLangSwitcher,
   },
 };
 </script>

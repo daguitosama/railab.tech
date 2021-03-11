@@ -63,7 +63,7 @@ export default {
       default: "Contáctenos",
     },
     contactPhone: {
-      type: String,
+      type: Object,
       default: () => ({
         body: "(+53) 5 413 21 20",
         tootlip: "Nuestro número de teléfono",

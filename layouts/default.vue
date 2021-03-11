@@ -5,7 +5,6 @@
     <AppNavigation />
     <Nuxt />
     <div class="h-40"></div>
-
   </div>
 </template>
 
@@ -16,6 +15,9 @@ import AppNavigation from "@/components/app/AppNavigation.vue";
 export default {
   components: {
     AppNavigation,
+  },
+  head() {
+    return this.$nuxtI18nSeo();
   },
 };
 </script>
