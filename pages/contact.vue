@@ -10,7 +10,7 @@
 
 <script>
 import SectionContactItems from "@/components/contact/SectionContactItems.vue";
-import ContactMap from "@/components/contact/ContactMap";
+import ContactMap from "@/components/contact/ContactMap.vue";
 import SectionContactForm from "@/components/contact/SectionContactForm.vue";
 
 export default {

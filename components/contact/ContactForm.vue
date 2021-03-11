@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent class="bg-gray-100 dark:bg-gray-800 py-6 px-4 rounded-lg shadow-lg">
+    <form @submit.prevent class="bg-gray-100 dark:bg-gray-800 py-6 px-4 rounded-lg shadow-lg transition-colors duration-300 ease-linear">
       <div>
         <label for="name" class="block ml-2 text-sm"> Email </label>
         <input type="email" name="email" required placeholder="Su correo" autocomplete="email"

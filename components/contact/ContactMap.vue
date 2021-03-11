@@ -26,6 +26,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -45,7 +46,7 @@ export default {
     mapSrc: {
       type: String,
       default:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.5193249822614!2d-82.41616114982733!3d23.114685484832467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd77b1fc030ac7%3A0x9f858e5c9c8fc918!2sRaiLab%20Mac!5e0!3m2!1sen!2scu!4v1615410576692!5m2!1sen!2scu",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917.4571127250474!2d-82.37762357080975!3d23.10337489905703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd7987a6a337dd%3A0x28490f5aec905f2c!2sRailab%20Mac!5e0!3m2!1sen!2scu!4v1615498403360!5m2!1sen!2scu",
     },
     mapTitle: {
       type: String,
