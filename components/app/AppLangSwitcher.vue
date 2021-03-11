@@ -106,7 +106,6 @@ export default {
     }
 
     function handleKey(evt) {
-      // console.log("Hanlding keyup " +"code: " +evt.code + " target: "+ evt?.target);
       if (evt.code == 'Escape') {
         toogleSwitch("close");
       }
@@ -114,7 +113,6 @@ export default {
 
     function handleClick(evt) {
       if (process.client) {
-        // console.log(evt.target);
 
         // if was in btn
         if (controlBtn.value.contains(evt?.target)) {
