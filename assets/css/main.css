@@ -17,12 +17,25 @@ html {
 /* fade-from-up */
 
 .fade-from-up-enter-active, .fade-from-up-leave-active {
-    transition: all 0.15s;
+    transition: all 0.25s;
 }
 
 .fade-from-up-enter, .fade-from-up-leave-to {
     opacity: 0;
-    margin-top: -5rem;
+    transform: translate3d(0, -3rem, 0);
+
+}
+
+
+/* fade-from-bottom */
+
+.fade-from-bottom-enter-active, .fade-from-bottom-leave-active {
+    transition: all 0.25s;
+}
+
+.fade-from-bottom-enter, .fade-from-bottom-leave-to {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
 }
 
 /* PAGE */
