@@ -29,10 +29,9 @@
           id="lang_menu"
           ref="controlMenu"
           v-show="switchIsOpen"
-          class="absolute z-20  bg-white dark:bg-surface-dark border rounded-md py-2 px-4 shadow-md"
+          class="absolute z-20 bg-white dark:bg-surface-dark border rounded-md py-2 px-4 shadow-md"
           aria-label="Language Options"
           :class="menuPositionClasses"
-
         >
           <ul :aria-label="$t('common.langSwitcher.optionsLabel')">
             <li v-for="locale in availableLocales" :key="locale.code">
@@ -56,8 +55,6 @@
         class="bg-gray-100 dark:bg-surface-dark opacity-75 fixed z-10 inset-0"
       ></div>
     </transition>
-
-   
   </div>
 </template>
 
@@ -71,21 +68,21 @@ import {
   toRefs,
 } from "@vue/composition-api";
 export default {
-  props:{
-    menuPosition:{
-      type:String,
-      default: "bottom-right"
-    }
+  props: {
+    menuPosition: {
+      type: String,
+      default: "bottom-right",
+    },
   },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
-    menuPositionClasses(){
-      if(this.menuPosition == 'bottom-right'){
-        return 'top-10 right-0'
+    menuPositionClasses() {
+      if (this.menuPosition == "bottom-right") {
+        return "top-10 right-0";
       }
-    }
+    },
   },
 
   setup() {
@@ -109,7 +106,8 @@ export default {
     }
 
     function handleKey(evt) {
-      if (evt?.target == "Escape" || evt.code == 27) {
+      // console.log("Hanlding keyup " +"code: " +evt.code + " target: "+ evt?.target);
+      if (evt.code == 'Escape') {
         toogleSwitch("close");
       }
     }
@@ -137,8 +135,6 @@ export default {
     // -------
     useEventListener("keyup", handleKey);
     useEventListener("click", handleClick);
-
-    
 
     return {
       toogleSwitch,
