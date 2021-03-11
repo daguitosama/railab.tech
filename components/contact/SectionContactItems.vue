@@ -6,66 +6,33 @@
         class="text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <li class="">
-          <a
-            :href="'tel:' + contactPhone"
-            :title="contactPhone.tooltip"
-            class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl py-4 px-16 flex justify-center items-center"
-          >
+          <ContactItem :contactItem="contactPhone">
             <Phone />
-            <p class="ml-2">
-              {{ contactPhoneFormated }}
-            </p>
-          </a>
+          </ContactItem>
         </li>
 
         <li>
-          <a
-            :href="contactTelegram.link"
-            :title="contactTelegram.tooltip"
-            class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl py-4 px-16 flex justify-center items-center"
-          >
+          <ContactItem :contactItem="contactTelegram">
             <Telegram />
-            <p
-              :href="contactTelegram.link"
-              :title="contactTelegram.tooltip"
-              class="ml-2"
-            >
-              {{ contactTelegram.body }}
-            </p>
-          </a>
+          </ContactItem>
         </li>
 
         <li>
-          <a
-            :href="contactWhatsapp.link"
-            :title="contactWhatsapp.tooltip"
-            class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl py-4 px-16 flex justify-center items-center"
-          >
+          <ContactItem :contactItem="contactWhatsapp">
             <WhatsApp />
-            <p class="ml-2">{{ contactWhatsapp.body }}</p>
-          </a>
+          </ContactItem>
         </li>
 
         <li>
-          <a
-            :href="contactFacebook.link"
-            :title="contactFacebook.tooltip"
-            class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl py-4 px-16  flex justify-center items-center"
-          >
-            <Facebook/>
-            <p class="ml-2" >{{ contactFacebook.body }}</p>
-          </a>
+          <ContactItem :contactItem="contactFacebook">
+            <Facebook />
+          </ContactItem>
         </li>
 
         <li>
-          <a
-            :href="contactTwitter.link"
-            :title="contactTwitter.tooltip"
-            class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl py-4 px-16 flex justify-center items-center"
-          >
+          <ContactItem :contactItem="contactTwitter">
             <Twitter />
-            <p class="ml-2" >{{ contactTwitter.body }}</p>
-          </a>
+          </ContactItem>
         </li>
       </ul>
     </div>
@@ -74,13 +41,22 @@
 
 <script>
 import AppHeading from "@/components/app/AppHeading.vue";
+import ContactItem from "@/components/contact/ContactItem.vue";
 import Phone from "@/components/icons/Phone.vue";
 import Telegram from "@/components/icons/Telegram.vue";
 import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 export default {
-  components: { AppHeading, Phone, Telegram, WhatsApp, Facebook, Twitter },
+  components: {
+    AppHeading,
+    Phone,
+    Telegram,
+    WhatsApp,
+    Facebook,
+    Twitter,
+    ContactItem,
+  },
   props: {
     contactHeading: {
       type: String,
@@ -88,7 +64,11 @@ export default {
     },
     contactPhone: {
       type: String,
-      default: "5354132120",
+      default: () => ({
+        body: "(+53) 5 413 21 20",
+        tootlip: "Nuestro número de teléfono",
+        link: "tel:5354132120",
+      }),
     },
     contactTelegram: {
       type: Object,
@@ -123,28 +103,7 @@ export default {
       }),
     },
   },
-  computed: {
-    contactPhoneFormated() {
-      let result = ["(", "+"];
-      this.contactPhone
-        .split("")
-        .forEach(function formatPhoneNumber(digit, index) {
-          if (index == 1) {
-            result.push(digit);
-            result.push(")");
-            result.push(" ");
-            return;
-          }
-          if (index == 2 || index == 5 || index == 7) {
-            result.push(digit);
-            result.push(" ");
-            return;
-          }
-          result.push(digit);
-        });
-      return result.join("");
-    },
-  },
+  
 };
 </script>
 
