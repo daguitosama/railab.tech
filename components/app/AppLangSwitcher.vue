@@ -24,13 +24,15 @@
       </button>
 
       <!-- language options -->
-      <transition name="fade-from-bottom">
+      <transition name="fade-from-up">
         <div
           id="lang_menu"
           ref="controlMenu"
           v-show="switchIsOpen"
-          class="absolute z-20 top-12 right-0 bg-white dark:bg-surface-dark border rounded-md py-2 px-4 shadow-md"
+          class="absolute z-20  bg-white dark:bg-surface-dark border rounded-md py-2 px-4 shadow-md"
           aria-label="Language Options"
+          :class="menuPositionClasses"
+
         >
           <ul :aria-label="$t('common.langSwitcher.optionsLabel')">
             <li v-for="locale in availableLocales" :key="locale.code">
@@ -69,11 +71,21 @@ import {
   toRefs,
 } from "@vue/composition-api";
 export default {
-  
+  props:{
+    menuPosition:{
+      type:String,
+      default: "bottom-right"
+    }
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
+    menuPositionClasses(){
+      if(this.menuPosition == 'bottom-right'){
+        return 'top-10 right-0'
+      }
+    }
   },
 
   setup() {
@@ -83,8 +95,10 @@ export default {
       switchIsOpen: false,
     });
 
+    /**
+     * switcState: 'open' || 'close' || null -> toggle
+     */
     function toogleSwitch(switchState) {
-      // switcState: 'open' || 'close' || null -> toggle
       if (!switchState) {
         state.switchIsOpen = !state.switchIsOpen;
         return;
@@ -124,20 +138,13 @@ export default {
     useEventListener("keyup", handleKey);
     useEventListener("click", handleClick);
 
-    // test
-
-    function test(params) {
-      if (process.client) {
-        document.querySelector("#a2").focus();
-      }
-    }
+    
 
     return {
       toogleSwitch,
       controlBtn,
       controlMenu,
       ...toRefs(state),
-      test,
     };
   },
 };
