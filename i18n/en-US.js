@@ -3,8 +3,14 @@ module.exports = {
     common: {
         navigation: {
             home: 'Home',
-            works: 'Projects',
-            contact_us: 'Contact Us'
+            services: {
+                body:'Services',
+                tooltip:'Our services page'
+            },
+            contact: {
+                body:'Contact',
+                tooltip:'Our contact page'
+            }
         },
         langSwitcher: {
             label: 'Language Switcher',

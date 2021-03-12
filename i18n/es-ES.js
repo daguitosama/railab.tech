@@ -2,8 +2,14 @@ module.exports = {
     common: {
         navigation: {
             home: 'Home',
-            works: 'Proyectos',
-            contact_us: 'Contáctenos'
+            services: {
+                body:'Servicios',
+                tooltip:'Nuestra página de servicios'
+            },
+            contact: {
+                body:'Contáctenos',
+                tooltip:'Nuestra página de contacto'
+            }
         },
         langSwitcher: {
             label: 'Selector de lenguaje',
