@@ -36,7 +36,7 @@
           <ul :aria-label="$t('common.langSwitcher.optionsLabel')">
             <li v-for="locale in availableLocales" :key="locale.code">
               <nuxt-link
-                class="hover:bg-gray-100 dark:hover:bg-gray-800 block py-1 px-2 rounded-lg text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light"
+                class="hover:bg-gray-100 dark:hover:bg-gray-800 block py-1 px-2 rounded-lg text-sm focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark"
                 :to="switchLocalePath(locale.code)"
                 @click.native="toogleSwitch('close')"
                 >{{ locale.name }}</nuxt-link
@@ -52,8 +52,10 @@
       <div
         v-if="switchIsOpen"
         @click="toogleSwitch('close')"
-        class="bg-gray-100 dark:bg-surface-dark opacity-75 fixed z-10 inset-0"
-      ></div>
+        class=" opacity-75 fixed z-10 inset-0"
+      >
+      <!-- TODO set tabTrabing bg-gray-100 dark:bg-surface-dark -->
+      </div>
     </transition>
   </div>
 </template>
@@ -91,29 +93,70 @@ export default {
     const state = reactive({
       switchIsOpen: false,
     });
+    var langMenuFocussables;
+
+    onMounted(() => {
+      console.log("onMounted");
+      initMenuFocusables();
+    });
 
     /**
      * switcState: 'open' || 'close' || null -> toggle
      */
     function toogleSwitch(switchState) {
-      if (!switchState) {
-        state.switchIsOpen = !state.switchIsOpen;
-        return;
+      if (process.client) {
+        if (!switchState) {
+          state.switchIsOpen = !state.switchIsOpen;
+
+          if (state.switchIsOpen && langMenuFocussables.length) {
+            langMenuFocussables[0].focus();
+          }
+
+          return;
+        }
+        switchState === "open"
+          ? (state.switchIsOpen = true)
+          : (state.switchIsOpen = false);
+
+        if (langMenuFocussables.length) {
+          langMenuFocussables[0].focus();
+        }
       }
-      switchState === "open"
-        ? (state.switchIsOpen = true)
-        : (state.switchIsOpen = false);
     }
 
     function handleKey(evt) {
-      if (evt.code == 'Escape') {
+      // tabTrabing   TODO
+      // if (
+      //   evt.code == "Tab" &&
+      //   state.switchIsOpen &&
+      //   langMenuFocussables.length
+      // ) {
+      //   // console.log(
+      //   //   "TT focusing: " + langMenuFocussables[langMenuFocussables.length - 1]
+      //   // );
+      //   // backwards
+      //   if (evt.shiftKey) {
+      //     if (evt.target === langMenuFocussables[0]) {
+      //       langMenuFocussables[langMenuFocussables.length - 1].focus();
+      //     }
+      //     // forward
+      //     else {
+      //       if (
+      //         evt.target === langMenuFocussables[langMenuFocussables.length - 1]
+      //       ) {
+      //         langMenuFocussables[0].focus();
+      //       }
+      //     }
+      //   }
+      // }
+
+      if (evt.code == "Escape") {
         toogleSwitch("close");
       }
     }
 
     function handleClick(evt) {
       if (process.client) {
-
         // if was in btn
         if (controlBtn.value.contains(evt?.target)) {
           toogleSwitch();
@@ -125,6 +168,14 @@ export default {
             start();
           }
         }
+      }
+    }
+
+    function initMenuFocusables() {
+      if (process.client) {
+        langMenuFocussables = Array.from(
+          controlMenu.value.querySelectorAll("a")
+        );
       }
     }
 
