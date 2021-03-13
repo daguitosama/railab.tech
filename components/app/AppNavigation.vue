@@ -43,8 +43,8 @@
             <AppLangSwitcher />
           </div>
         </div>
-
-        <div>
+        <!-- burger -->
+        <div class="md:hidden relative z-20">
           <AppNavigationBurgerButton
             v-on:toogle="toogleNav"
             :isOpen="isMenuOpen"
@@ -54,9 +54,9 @@
         <transition name="fade-from-left">
           <div
             v-if="isMenuOpen"
-            class="md:hidden absolute top-0 left-0 w-10/12 shadow-2xl min-h-screen bg-surface-light dark:bg-surface-dark"
+            class="md:hidden absolute top-0 left-0 w-full min-h-screen bg-surface-light dark:bg-surface-dark"
           >
-            <ul class="px-6 py-7">
+            <ul ref="lang_menu" class="px-6 py-7">
               <!-- logo -->
               <div class="w-28">
                 <nuxt-link
@@ -70,19 +70,37 @@
               <li class="mt-10 font-bold text-sm opacity-80">Links</li>
               <div class="mt-4 space-y-4">
                 <li
-                  class="py-2 pl-2 hover:bg-gray-100 rounded-lg transform transition-colors duration-150"
+                  class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
                 >
-                  Services
+                  <nuxt-link
+                    :to="localePath('/')"
+                    exact=""
+                    :title="$t('common.navigation.services.tooltip')"
+                    :class="{
+                      'font-semibold text-primary-light ': isOnPath('index'),
+                    }"
+                    class="h-full block"
+                    >{{ $t("common.navigation.services.body") }}</nuxt-link
+                  >
                 </li>
                 <li
-                  class="py-2 pl-2 hover:bg-gray-100 rounded-lg transform transition-colors duration-150"
+                  class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
                 >
-                  Contact
+                  <nuxt-link
+                    :to="localePath('contact')"
+                    exact=""
+                    :title="$t('common.navigation.contact.tooltip')"
+                    :class="{
+                      'font-semibold text-primary-light': isOnPath('contact'),
+                    }"
+                    class="h-full block"
+                    >{{ $t("common.navigation.contact.body") }}</nuxt-link
+                  >
                 </li>
               </div>
               <!-- social links -->
               <li class="mt-10 font-bold text-sm opacity-80">Social</li>
-              <div>
+              <div class="mt-4">
                 <button>f</button>
               </div>
               <!-- utilities -->
@@ -103,6 +121,8 @@ import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
+import { onMounted, reactive, ref, toRefs } from "vue-demi";
+import { useEventListener } from "@vueuse/core";
 
 export default {
   components: {
@@ -111,20 +131,40 @@ export default {
     AppLangSwitcher,
     AppNavigationBurgerButton,
   },
-  data() {
-    return {
+  setup() {
+    let state = reactive({
       isMenuOpen: false,
+    });
+    let lang_menu = ref(null);
+
+    if (process.client) {
+      useEventListener(lang_menu, "click", onMenuClick);
+    }
+
+    function toogleNav() {
+      state.isMenuOpen = !state.isMenuOpen;
+    }
+
+    function onMenuClick(evt) {
+      // if is an anchor close the menu
+      if (evt?.target?.tagName === "A") {
+        toogleNav();
+      }
+    }
+
+    return {
+      ...toRefs(state),
+      //
+      toogleNav,
+      lang_menu
     };
   },
+
   methods: {
     isOnPath(path /* string */) {
       return this.$route.name.startsWith(path);
     },
-    toogleNav() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
   },
-  computed: {},
 };
 </script>
 
