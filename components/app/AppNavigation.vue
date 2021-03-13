@@ -77,7 +77,7 @@
                     exact=""
                     :title="$t('common.navigation.services.tooltip')"
                     :class="{
-                      'font-semibold text-primary-light ': isOnPath('index'),
+                      'font-semibold text-primary-light': isOnPath('index'),
                     }"
                     class="h-full block"
                     >{{ $t("common.navigation.services.body") }}</nuxt-link
@@ -121,7 +121,7 @@ import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
-import { onMounted, reactive, ref, toRefs } from "vue-demi";
+import {  reactive, ref, toRefs } from "vue-demi";
 import { useEventListener } from "@vueuse/core";
 
 export default {
