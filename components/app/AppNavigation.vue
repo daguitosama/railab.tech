@@ -9,7 +9,7 @@
             :to="localePath('/')"
             class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
           >
-          <Logo />
+            <Logo />
           </nuxt-link>
         </div>
 
@@ -20,8 +20,8 @@
               :to="localePath('/')"
               exact=""
               :title="$t('common.navigation.services.tooltip')"
-              :class="{ 'nuxt-link-exact-active': isOnPath('/') }"
-              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1   transition-all duration-100 focus:outline-none focus:border-primary-light focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
+              :class="{ 'nuxt-link-exact-active': isOnPath('index') }"
+              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1 transition-all duration-100 focus:outline-none focus:border-primary-light focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
               >{{ $t("common.navigation.services.body") }}</nuxt-link
             >
           </li>
@@ -30,19 +30,69 @@
               :to="localePath('contact')"
               exact=""
               :title="$t('common.navigation.contact.tooltip')"
-              :class="{ 'nuxt-link-exact-active': isOnPath('/') }"
-              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1  transition-all duration-100 focus:outline-none  focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
+              :class="{ 'nuxt-link-exact-active': isOnPath('contact') }"
+              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1 transition-all duration-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
               >{{ $t("common.navigation.contact.body") }}</nuxt-link
             >
           </li>
         </ul>
-        <!-- utilities -->
+        <!-- desktop utilities -->
         <div class="hidden md:flex space-x-2">
           <ColorModeCtrl />
           <div class="w-8 h-8">
-            <AppLangSwitcher  />
+            <AppLangSwitcher />
           </div>
         </div>
+
+        <div>
+          <AppNavigationBurgerButton
+            v-on:toogle="toogleNav"
+            :isOpen="isMenuOpen"
+          />
+        </div>
+        <!-- mobiles links -->
+        <transition name="fade-from-left">
+          <div
+            v-if="isMenuOpen"
+            class="md:hidden absolute top-0 left-0 w-10/12 shadow-2xl min-h-screen bg-surface-light dark:bg-surface-dark"
+          >
+            <ul class="px-6 py-7">
+              <!-- logo -->
+              <div class="w-28">
+                <nuxt-link
+                  :to="localePath('/')"
+                  class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
+                >
+                  <Logo />
+                </nuxt-link>
+              </div>
+              <!-- links -->
+              <li class="mt-10 font-bold text-sm opacity-80">Links</li>
+              <div class="mt-4 space-y-4">
+                <li
+                  class="py-2 pl-2 hover:bg-gray-100 rounded-lg transform transition-colors duration-150"
+                >
+                  Services
+                </li>
+                <li
+                  class="py-2 pl-2 hover:bg-gray-100 rounded-lg transform transition-colors duration-150"
+                >
+                  Contact
+                </li>
+              </div>
+              <!-- social links -->
+              <li class="mt-10 font-bold text-sm opacity-80">Social</li>
+              <div>
+                <button>f</button>
+              </div>
+              <!-- utilities -->
+              <div class="mt-10 flex items-center justify-center space-x-4">
+                <button>a</button>
+                <button>b</button>
+              </div>
+            </ul>
+          </div>
+        </transition>
       </nav>
     </header>
   </div>
@@ -52,23 +102,34 @@
 import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
+import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
 
 export default {
   components: {
     Logo,
     ColorModeCtrl,
     AppLangSwitcher,
+    AppNavigationBurgerButton,
+  },
+  data() {
+    return {
+      isMenuOpen: false,
+    };
   },
   methods: {
     isOnPath(path /* string */) {
       return this.$route.name.startsWith(path);
     },
+    toogleNav() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
   },
+  computed: {},
 };
 </script>
 
 <style>
-.nuxt-link-exact-active{
-@apply opacity-100 font-semibold;
+.nuxt-link-exact-active {
+  @apply opacity-100 font-semibold;
 }
 </style>

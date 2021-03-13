@@ -96,7 +96,7 @@ export default {
     var langMenuFocussables;
 
     onMounted(() => {
-      console.log("onMounted");
+      // console.log("onMounted");
       initMenuFocusables();
     });
 
