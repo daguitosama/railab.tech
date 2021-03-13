@@ -121,7 +121,7 @@ import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
-import {  reactive, ref, toRefs } from "vue-demi";
+import { reactive, ref, toRefs } from "@vue/composition-api";
 import { useEventListener } from "@vueuse/core";
 
 export default {
@@ -153,10 +153,12 @@ export default {
     }
 
     return {
+      // refs
+      lang_menu,
+      // state
       ...toRefs(state),
-      //
+      // functions
       toogleNav,
-      lang_menu
     };
   },
 
