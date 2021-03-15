@@ -5,12 +5,12 @@
     <!-- mobile -->
     <div class="md:hidden">
       <nav class="py-6 flex items-baseline justify-between container">
-        <div class="w-28 h-auto bg-teal-300">
+        <div class="w-28">
           <nuxt-link
             :to="localePath('/')"
             class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
           >
-            <Logo />
+            <Logo class="w-full"/>
           </nuxt-link>
         </div>
 
@@ -33,7 +33,7 @@
                   :to="localePath('/')"
                   class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
                 >
-                  <Logo />
+                  <Logo class="w-full" />
                 </nuxt-link>
               </div>
               <!-- links -->
@@ -108,10 +108,10 @@
               <li class="mt-10 font-bold text-sm opacity-80">Utilities</li>
               <li class="mt-4">
                 <ul class="flex items-center space-x-4">
-                  <li class="w-12 h-12">
+                  <li class="w-10 h-10">
                     <ColorModeCtrl class="w-full h-full flex items-center justify-center" svgClasses="w-6 h-6" />
                   </li>
-                  <li class="w-12 h-12">
+                  <li class="w-10 h-10">
                     <AppLangSwitcher />
                   </li>
                 </ul>
@@ -129,7 +129,7 @@
             :to="localePath('/')"
             class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
           >
-            <Logo />
+            <Logo class="w-full"/>
           </nuxt-link>
         </div>
 

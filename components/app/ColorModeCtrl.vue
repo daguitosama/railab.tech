@@ -1,7 +1,7 @@
 <template>
     <button
       @click="toogleColor"
-      class="block py-2 px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark rounded-xl border border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transform transition-colors duration-150 "
+      class="block py-2 px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark rounded-xl border  hover:bg-gray-100 dark:hover:bg-gray-800 transform transition-colors duration-150 "
     >
       <svg
         :class="svgClasses"
