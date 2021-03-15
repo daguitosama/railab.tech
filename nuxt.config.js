@@ -47,6 +47,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     // 'nuxt-vite',
+    '@nuxt/postcss8',
 
   ],
   // vite:{
@@ -104,7 +105,8 @@ export default {
     // Add plugin names as key and arguments as value
     // Install them before as dependencies with npm or yarn
     plugins: {
-      'postcss-focus-visible': {}
+      'postcss-focus-visible': {},
+      '@tailwindcss/jit:':{}
     }
   },
 
