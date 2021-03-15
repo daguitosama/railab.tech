@@ -14,7 +14,7 @@
         <button
           class="block mx-auto md:mx-0 text-lg py-3 px-10 bg-primary-light rounded-2xl text-white"
         >
-          Contactenos
+          Contáctenos
         </button>
         <a href="#" class="mt-5 text-lg block mx-auto text-center md:text-left"
           >Vea nuestros servicios →</a
