@@ -5,7 +5,7 @@
     <!-- mobile -->
     <div class="md:hidden">
       <nav class="py-6 flex items-baseline justify-between container">
-        <div class="w-28">
+        <div class="w-28 h-auto bg-teal-300">
           <nuxt-link
             :to="localePath('/')"
             class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
@@ -28,7 +28,7 @@
               class="px-6 py-7 z-10 w-full h-full overflow-y-auto bg-surface-light dark:bg-surface-dark"
             >
               <!-- logo -->
-              <div class="w-28">
+              <div class="w-28 z-20">
                 <nuxt-link
                   :to="localePath('/')"
                   class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
@@ -81,7 +81,7 @@
               <!-- social links -->
               <li class="mt-10 font-bold text-sm opacity-80">Social</li>
               <li class="mt-4">
-                <ul class="grid grid-cols-3 gap-4">
+                <ul class="flex items-center space-x-4">
                   <li>
                     <ContactItemButton>
                       <Telegram />
@@ -107,46 +107,12 @@
               <!-- utilities -->
               <li class="mt-10 font-bold text-sm opacity-80">Utilities</li>
               <li class="mt-4">
-                <ul class="grid grid-cols-3 gap-4">
-                  <li>
-                    <ContactItemButton>
-                      <Telegram />
-                    </ContactItemButton>
+                <ul class="flex items-center space-x-4">
+                  <li class="w-12 h-12">
+                    <ColorModeCtrl class="w-full h-full flex items-center justify-center" svgClasses="w-6 h-6" />
                   </li>
-                  <li>
-                    <ContactItemButton>
-                      <WhatsApp />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <Telegram />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <WhatsApp />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <Telegram />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <WhatsApp />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <Telegram />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton>
-                      <WhatsApp />
-                    </ContactItemButton>
+                  <li class="w-12 h-12">
+                    <AppLangSwitcher />
                   </li>
                 </ul>
               </li>
@@ -207,8 +173,6 @@ import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
-import { reactive, ref, toRefs } from "@vue/composition-api";
-import { useEventListener } from "@vueuse/core";
 import ContactItemButton from "@/components/contact/ContactItemButton.vue";
 import Telegram from "@/components/icons/Telegram.vue";
 import WhatsApp from "@/components/icons/WhatsApp.vue";
@@ -234,34 +198,26 @@ export default {
 
   methods: {
     isOnPath(path /* string */) {
-      return this.$route.name.startsWith(path);
+      return this.$route?.name?.startsWith(path);
     },
-    ...mapMutations("ui/", [
-      "closeNav",
-      'toogleNav',
-    ]),
+    ...mapMutations("ui/", ["closeNav", "toogleNav"]),
   },
-  mounted(){
-    let lang_menu = this.$refs['lang_menu'];
-    
-    let onMenuClickBinded = onMenuClick.bind(this)
+  mounted() {
+    let lang_menu = this.$refs["lang_menu"];
 
-    if(process.client){
-      lang_menu.addEventListener('click',onMenuClickBinded)
+    let onMenuClickBinded = onMenuClick.bind(this);
+
+    if (process.client) {
+      lang_menu.addEventListener("click", onMenuClickBinded);
     }
 
-
     function onMenuClick(evt) {
-      console.log(this)
-
-
       // if is an anchor close the menu
       if (evt?.target?.tagName === "A") {
-        
         this.toogleNav();
       }
     }
-  }
+  },
 };
 </script>
 

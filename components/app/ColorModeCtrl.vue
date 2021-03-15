@@ -1,11 +1,10 @@
 <template>
-  <div>
     <button
       @click="toogleColor"
       class="block py-2 px-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark rounded-xl border border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transform transition-colors duration-150 "
     >
       <svg
-        class="w-4 h-4"
+        :class="svgClasses"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -21,14 +20,17 @@
         <path v-if="isLight" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
       </svg>
     </button>
-  </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  props:{
+    svgClasses:{
+      type:String,
+      default:"w-4 h-4"
+    }
+  }
+  ,
   methods: {
     toogleColor() {
       if (this.$colorMode.value === "light") {
