@@ -46,17 +46,11 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    // 'nuxt-vite',
-    '@nuxt/postcss8',
-
   ],
-  // vite:{
-  //   publicDir:'<root>/static'
-  // },
+  
   colorMode: {
     classSuffix: ''
   },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
@@ -90,15 +84,11 @@ export default {
     langDir: 'i18n/'
   },
 
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  // pwa: {
-  //   manifest: {
-  //     // lang: 'en'
-  //   }
-  // },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    
   },
 
   postcss: {
@@ -106,8 +96,12 @@ export default {
     // Install them before as dependencies with npm or yarn
     plugins: {
       'postcss-focus-visible': {},
-      '@tailwindcss/jit:':{}
     }
   },
+
+  tailwindcss: {
+    jit: true
+  }
+  
 
 }
