@@ -1,5 +1,6 @@
 <template>
   <header
+    id="main-navigation"
     class="fixed top-0 left-0 w-full z-20 bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
   >
     <!-- mobile -->
@@ -25,7 +26,7 @@
         <transition name="fade-from-left">
           <div ref="lang_menu" v-show="navOpen" class="fixed inset-0 h-full">
             <ul
-              class="px-6 py-7 z-10 w-full h-full overflow-y-auto bg-surface-light dark:bg-surface-dark"
+              class="px-6 py-7 z-10 w-full h-full overflow-y-auto bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
             >
               <!-- logo -->
               <div class="w-28 z-20">

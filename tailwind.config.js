@@ -46,12 +46,7 @@ module.exports = {
       }
     },
   },
-  variants: {
-    extend: {
-      ringColor: ['focus-visible'],
-      ringWidth: ['focus-visible'],
-    },
-  },
+  
 
   plugins: [],
 }
