@@ -1,21 +1,42 @@
 module.exports = {
-    common: {
-        navigation: {
-            home: 'Home',
-            services: {
-                body:'Servicios',
-                tooltip:'Nuestra página de servicios'
-            },
-            contact: {
-                body:'Contáctenos',
-                tooltip:'Nuestra página de contacto'
-            }
+    navigation: {
+
+        logo: {
+            title: 'Railab Logo'
         },
-        langSwitcher: {
-            label: 'Selector de lenguaje',
-            optionsLabel: 'Opciones'
+        services:{
+            tooltip:'Nuestra página de servicios',
+            body:'Servicios'
+        },
+        contact:{
+            tooltip:'Nuestra página de contacto',
+            body:'Contacto'
+        },
+    },
+    utilities:{
+        navigationMenu:{
+            label:'Menu de Navegacion'
+        },
+        colorCtrl:{
+            label:'Selector de color'
         }
     },
+    common: {
+
+        services: {
+            body: 'Servicios',
+            tooltip: 'Nuestra página de servicios'
+        },
+        contact: {
+            body: 'Contáctenos',
+            tooltip: 'Nuestra página de contacto'
+        }
+    },
+    langSwitcher: {
+        label: 'Selector de lenguaje',
+        optionsLabel: 'Opciones'
+    },
+
     // -------
     // #_HOME
     // -------

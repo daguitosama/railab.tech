@@ -3,7 +3,7 @@
     <div class="relative">
       <button
         ref="controlBtn"
-        :aria-label="$t('common.langSwitcher.label')"
+        :aria-label="$t('langSwitcher.label')"
         aria-haspopup="true"
         aria-controls="lang_menu"
         class="p-2 rounded-xl border w-full h-full focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 ease-linear"
@@ -33,7 +33,7 @@
           aria-label="Language Options"
           :class="menuPositionClasses"
         >
-          <ul :aria-label="$t('common.langSwitcher.optionsLabel')">
+          <ul :aria-label="$t('langSwitcher.optionsLabel')">
             <li v-for="locale in availableLocales" :key="locale.code">
               <nuxt-link
                 class="hover:bg-gray-100 dark:hover:bg-gray-800 block py-1 px-2 rounded-lg text-sm focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark"
