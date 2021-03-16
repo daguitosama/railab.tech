@@ -123,7 +123,10 @@
                     />
                   </li>
                   <li class="w-10 h-10">
-                    <AppLangSwitcher role="menuitem" :label="$t('utilities.navigationMenu.label')"/>
+                    <AppLangSwitcher
+                      role="menuitem"
+                      :label="$t('utilities.navigationMenu.label')"
+                    />
                   </li>
                 </ul>
               </li>
@@ -171,9 +174,15 @@
         </ul>
         <!-- desktop utilities -->
         <div class="hidden md:flex space-x-2">
-          <ColorModeCtrl role="menuitem" :label="$t('utilities.colorCtrl.label')" />
+          <ColorModeCtrl
+            role="menuitem"
+            :label="$t('utilities.colorCtrl.label')"
+          />
           <div class="w-8 h-8">
-            <AppLangSwitcher role="menuitem" :label="$t('utilities.navigationMenu.label')" />
+            <AppLangSwitcher
+              role="menuitem"
+              :label="$t('utilities.navigationMenu.label')"
+            />
           </div>
         </div>
       </nav>
@@ -191,7 +200,8 @@ import Telegram from "@/components/icons/Telegram.vue";
 import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
-import { mapGetters, mapMutations } from "vuex";
+import { useEventListener } from "@vueuse/core";
+import { ref } from "@vue/composition-api";
 export default {
   components: {
     Logo,
@@ -205,31 +215,48 @@ export default {
     Twitter,
   },
 
-  computed: {
-    ...mapGetters("ui/", ["navOpen"]),
-  },
-
   methods: {
     isOnPath(path /* string */) {
       return this.$route?.name?.startsWith(path);
     },
-    ...mapMutations("ui/", ["closeNav", "toogleNav"]),
   },
-  mounted() {
-    let lang_menu = this.$refs["lang_menu"];
 
-    let onMenuClickBinded = onMenuClick.bind(this);
+  setup() {
+    let navOpen = ref(false);
+    let lang_menu = ref(null);
 
-    if (process.client) {
-      lang_menu.addEventListener("click", onMenuClickBinded);
-    }
+    useEventListener(lang_menu, "click", onMenuClick);
 
     function onMenuClick(evt) {
       // if is an anchor close the menu
       if (evt?.target?.tagName === "A") {
-        this.toogleNav();
+        toogleNav();
       }
     }
+
+    function toogleNav() {
+      navOpen.value = !navOpen.value;
+      if (process.client) {
+        if (navOpen.value) {
+          document.body.classList.add("overflow-hidden", "absolute", "inset-0");
+        } else {
+          document.body.classList.remove(
+            "overflow-hidden",
+            "absolute",
+            "inset-0"
+          );
+        }
+      }
+    }
+
+    return {
+      // refs
+      lang_menu,
+      // state
+      navOpen,
+      // function
+      toogleNav,
+    };
   },
 };
 </script>
