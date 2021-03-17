@@ -41,7 +41,7 @@
                 </nuxt-link>
               </div>
               <!-- links -->
-              <li class="mt-10 font-bold text-sm opacity-80">Links</li>
+              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.linksText')}}</li>
               <div class="mt-4 space-y-4">
                 <li
                   role="menuitem"
@@ -85,33 +85,33 @@
                 </li>
               </div>
               <!-- social links -->
-              <li class="mt-10 font-bold text-sm opacity-80">Social</li>
+              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.socialText')}}</li>
               <li class="mt-4">
                 <ul class="flex items-center space-x-4">
                   <li>
-                    <ContactItemButton role="menuitem">
-                      <Telegram />
+                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactTelegram')">
+                      <Telegram :title="$t('icons.Telegram.title')"/>
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem">
-                      <WhatsApp />
+                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactWhatsApp')">
+                      <WhatsApp :title="$t('icons.WhatsApp.title')"/>
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem">
-                      <Facebook />
+                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactFacebook')">
+                      <Facebook :title="$t('icons.Facebook.title')"/>
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem">
-                      <Twitter />
+                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactTwitter')">
+                      <Twitter :title="$t('icons.Twitter.title')"/>
                     </ContactItemButton>
                   </li>
                 </ul>
               </li>
               <!-- utilities -->
-              <li class="mt-10 font-bold text-sm opacity-80">Utilities</li>
+              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.utilitiesText')}}</li>
               <li class="mt-4">
                 <ul class="flex items-center space-x-4">
                   <li class="w-10 h-10">
@@ -258,6 +258,12 @@ export default {
       toogleNav,
     };
   },
+
+  computed:{
+    test(){
+      return this.$t('contact.contactTelegram.body')
+    }
+  }
 };
 </script>
 

@@ -5,98 +5,79 @@ module.exports = {
         logo: {
             title: 'Railab Logo'
         },
-        services:{
-            tooltip:'Our services page',
-            body:'Services'
-        },
-        contact:{
-            tooltip:'Our contact page',
-            body:'Contact'
-        },
-    },
-    utilities:{
-        navigationMenu:{
-            label:'Navigation Menu'
-        },
-        colorCtrl:{
-            label:'Color scheme selector'
-        }
-    },
-    common: {
-
         services: {
-            body: 'Services',
-            tooltip: 'Our services page'
+            tooltip: 'Our services page',
+            body: 'Services'
         },
         contact: {
-            body: 'Contact',
-            tooltip: 'Our contact page'
+            tooltip: 'Our contact page',
+            body: 'Contact'
+        },
+        linksText: 'Links',
+        socialText: 'Social',
+        utilitiesText:'Utilities'
+
+    },
+    utilities: {
+        navigationMenu: {
+            label: 'Navigation Menu'
+        },
+        colorCtrl: {
+            label: 'Color scheme selector'
         }
     },
+
     langSwitcher: {
         label: 'Language Switcher',
         optionsLabel: 'Options'
     },
 
+    contact: {
+        contactHeading: "Contact us",
+        contactPhone: {
+            body: "(+53) 5 413 21 20",
+            tootlip: "Our phone number",
+            link: "tel:5354132120",
+        },
+        contactTelegram: {
+            body: "Telegram",
+            tootlip: "Our Telegram group",
+            link: "https://t.me/RailabMac",
+        },
+        contactWhatsApp: {
+            body: "WhatsApp",
+            tootlip: "Our WhatsApp account",
+            link: "https://wa.me/+5354132120",
+        },
+        contactFacebook: {
+            body: "Facebook",
+            tootlip: "Our Facebook page",
+            link: "https://m.facebook.com/RaiLabMacbook",
+        },
+        contactTwitter: {
+            body: "Twitter",
+            tootlip: "Our Twitter account",
+            link: "https://twitter.com/RailabMac",
+        },
+    },
 
-    // -------
-    // #_HOME
-    // -------
-    home: {
-        // 
-        intro: {
-            bulleted: {
-                design: 'Design',
-                development: 'Development',
-                support: 'Support'
-            },
-            heading: 'We make websites for local businesses',
-            description: `We plan, design and build  to deliver a delightful experience.`,
-            cta_0: `See what we do`,
+    icons: {
+        Phone: {
+            title: 'Phone'
         },
-        // 
-        offers: {
-            title: 'We ship',
-            items: [
-                {
-                    icon: 'lightning',
-                    iconTitle: 'lightning volt',
-                    title: 'Blazing fast speed',
-                    body: `Clients don't like to wait for content, world class performance metrics are warranted.`
-                },
-                {
-                    icon: 'heart',
-                    iconTitle: 'heart',
-                    title: 'Delightful design',
-                    body: `A clean, easy to use and engaging interface it's a must have for us.`
-                },
-                {
-                    icon: 'beaker',
-                    iconTitle: 'beaker',
-                    title: 'Custom Development',
-                    body: `A product made expecially for your needs.`
-                },
-                {
-                    icon: 'search',
-                    iconTitle: 'magnifier',
-                    title: 'SEO optimized content',
-                    body: `Guidance and tools for you to declare your services and products as SEO optimal as posible.`
-                },
-                {
-                    icon: 'light_bulb',
-                    iconTitle: 'light bulb',
-                    title: 'Easy to manage infrastructure',
-                    body: `Leave you with a complicated to manage system it's simply not an option to us.`
-                },
-                {
-                    icon: 'support',
-                    iconTitle: 'lifeguard',
-                    title: 'Support',
-                    body: `We are happy to help you maintain a secure and smooth infrastructure in this ever changing technical landscape.`
-                },
-            ],
+        Telegram: {
+            title: 'Telegram logo'
         },
-        // 
-        projects: []
-    }
+        WhatsApp: {
+            title: 'Whatsapp logo'
+        },
+        Facebook: {
+            title: 'Facebook logo'
+        },
+        Twitter: {
+            title: 'Twitter logo'
+        },
+    },
+
 }
+
