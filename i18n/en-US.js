@@ -216,8 +216,8 @@ module.exports = {
             heading:'Technical Advise',
             cta: {
                 body: 'Go to the group →',
-                tooltip: 'Our contact page',
-                link: 'contact'
+                tooltip: 'Our Mac comunity on Telegram',
+                link: 'https://t.me/RailabMac'
             },
             description:`Not all problems are so critical. We have a comunity to share information an knowledge on Telegram. If you want to learn how to solve this problems or to ask something join us at " Railab Macbook Support " Telegram group. The objective is share experiences and help Mac users to solve everyday problems. It works like a forum. The solution of those comun problems might be there.`
         },

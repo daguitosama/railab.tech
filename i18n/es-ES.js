@@ -216,8 +216,8 @@ module.exports = {
             heading: 'Asesoría Técnica',
             cta: {
                 body: 'Ir al grupo →',
-                tooltip: 'Our contact page',
-                link: 'contact'
+                tooltip: 'Nuestra comnunidad Mac en Telegram',
+                link: 'https://t.me/RailabMac'
             },
             description: `No todos los problemas son tan graves como para venir a nuestro taller. Contamos con una comunidad internacional para la gestión de la información y el conocimiento en Telegram. Si desea aprender a como solucionar sus propios problemas únase al grupo Railab Macbook Support. El objetivo del grupo es ayudar de manera gratuita a usuarios de Mac’s a resolver dificultades que se dan en el día a día. La dinámica es tipo fórum, con la participación conjunta entre administradores del grupo y usuarios. La solución a sus problemas está ahí.`
         },

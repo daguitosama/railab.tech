@@ -36,25 +36,19 @@ export default {
   props: {
     sectionHeading: {
       type: String,
-      default: "Asesoría Técnica",
+      default: "",
     },
     groupLink: {
       type: Object,
       default: () => ({
         link: "#",
-        body: "Ir al grupo",
-        tooltip: "Enlace al grupo de Telegram",
+        body: "",
+        tooltip: "",
       }),
     },
     description:{
         type:String,
-        default:`No todos los problemas son tan graves como para venir a nuestro 
-        taller. Contamos con una comunidad internacional para la gestión de la 
-        información y el conocimiento en Telegram. Si desea aprender a como 
-        solucionar sus propios problemas únase al grupo Railab Macbook Support. 
-        El objetivo del grupo es ayudar de manera gratuita a usuarios de Mac’s a 
-        resolver dificultades que se dan en el día a día. La dinámica es tipo fórum, con la participación conjunta entre administradores del grupo y usuarios. 
-        La solución a sus problemas está ahí.`
+        default:``
     }
   },
 };
