@@ -41,77 +41,57 @@
                 </nuxt-link>
               </div>
               <!-- links -->
-              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.linksText')}}</li>
+              <li class="mt-10 font-bold text-sm opacity-80">
+                {{ $t("navigation.linksText") }}
+              </li>
               <div class="mt-4 space-y-4">
-                <li
-                  role="menuitem"
-                  class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
-                  :class="{
-                    'bg-gray-100 dark:bg-gray-800': isOnPath('index'),
-                  }"
-                >
-                  <nuxt-link
-                    :to="localePath('/')"
-                    exact=""
-                    :title="$t('navigation.services.tooltip')"
-                    :class="{
-                      'font-semibold text-primary-light dark:text-onDark': isOnPath(
-                        'index'
-                      ),
-                    }"
-                    class="h-full block"
-                    >{{ $t("navigation.services.body") }}</nuxt-link
-                  >
-                </li>
-                <li
-                  role="menuitem"
-                  class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
-                  :class="{
-                    'bg-gray-100 dark:bg-gray-800': isOnPath('contact'),
-                  }"
-                >
-                  <nuxt-link
-                    :to="localePath('contact')"
-                    exact=""
-                    :title="$t('navigation.contact.tooltip')"
-                    :class="{
-                      'font-semibold text-primary-light dark:text-onDark': isOnPath(
-                        'contact'
-                      ),
-                    }"
-                    class="h-full block"
-                    >{{ $t("navigation.contact.body") }}</nuxt-link
-                  >
-                </li>
+                <AppMobileNavigationLink :navigationLink="mobileLinks[0]" />
+                <AppMobileNavigationLink :navigationLink="mobileLinks[1]" />
               </div>
               <!-- social links -->
-              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.socialText')}}</li>
+              <li class="mt-10 font-bold text-sm opacity-80">
+                {{ $t("navigation.socialText") }}
+              </li>
               <li class="mt-4">
                 <ul class="flex items-center space-x-4">
                   <li>
-                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactTelegram')">
-                      <Telegram :title="$t('icons.Telegram.title')"/>
+                    <ContactItemButton
+                      role="menuitem"
+                      :contactItem="$t('contact.contactTelegram')"
+                    >
+                      <Telegram :title="$t('icons.Telegram.title')" />
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactWhatsApp')">
-                      <WhatsApp :title="$t('icons.WhatsApp.title')"/>
+                    <ContactItemButton
+                      role="menuitem"
+                      :contactItem="$t('contact.contactWhatsApp')"
+                    >
+                      <WhatsApp :title="$t('icons.WhatsApp.title')" />
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactFacebook')">
-                      <Facebook :title="$t('icons.Facebook.title')"/>
+                    <ContactItemButton
+                      role="menuitem"
+                      :contactItem="$t('contact.contactFacebook')"
+                    >
+                      <Facebook :title="$t('icons.Facebook.title')" />
                     </ContactItemButton>
                   </li>
                   <li>
-                    <ContactItemButton role="menuitem" :contactItem="$t('contact.contactTwitter')">
-                      <Twitter :title="$t('icons.Twitter.title')"/>
+                    <ContactItemButton
+                      role="menuitem"
+                      :contactItem="$t('contact.contactTwitter')"
+                    >
+                      <Twitter :title="$t('icons.Twitter.title')" />
                     </ContactItemButton>
                   </li>
                 </ul>
               </li>
               <!-- utilities -->
-              <li class="mt-10 font-bold text-sm opacity-80">{{$t('navigation.utilitiesText')}}</li>
+              <li class="mt-10 font-bold text-sm opacity-80">
+                {{ $t("navigation.utilitiesText") }}
+              </li>
               <li class="mt-4">
                 <ul class="flex items-center space-x-4">
                   <li class="w-10 h-10">
@@ -191,6 +171,7 @@
 </template>
 
 <script>
+import AppMobileNavigationLink from "@/components/app/AppMobileNavigationLink.vue";
 import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
@@ -204,6 +185,7 @@ import { useEventListener } from "@vueuse/core";
 import { ref } from "@vue/composition-api";
 export default {
   components: {
+    AppMobileNavigationLink,
     Logo,
     ColorModeCtrl,
     AppLangSwitcher,
@@ -213,6 +195,25 @@ export default {
     WhatsApp,
     Facebook,
     Twitter,
+  },
+
+  data() {
+    return {
+      mobileLinks: [
+        {
+          path: "index",
+          tooltipLocation: 'navigation.services.tooltip',
+          localePath: "/",
+          bodyLocation: "navigation.services.body",
+        },
+        {
+          path: "contact",
+          tooltipLocation: 'navigation.contact.tooltip',
+          localePath: "contact",
+          bodyLocation: "navigation.contact.body",
+        },
+      ],
+    };
   },
 
   methods: {
@@ -258,12 +259,6 @@ export default {
       toogleNav,
     };
   },
-
-  computed:{
-    test(){
-      return this.$t('contact.contactTelegram.body')
-    }
-  }
 };
 </script>
 

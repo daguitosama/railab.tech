@@ -70,38 +70,6 @@ export default {
   //       link: "tel:5354132120",
   //     }),
   //   },
-  //   contactTelegram: {
-  //     type: Object,
-  //     default: () => ({
-  //       body: "Telegram",
-  //       tootlip: "Enlace a nuestro grupo de Telegram",
-  //       link: "https://t.me/RailabMac",
-  //     }),
-  //   },
-  //   contactWhatsapp: {
-  //     type: Object,
-  //     default: () => ({
-  //       body: "WhatsApp",
-  //       tootlip: "Enlace a nuestro WhatsApp",
-  //       link: "https://wa.me/+5354132120",
-  //     }),
-  //   },
-  //   contactFacebook: {
-  //     type: Object,
-  //     default: () => ({
-  //       body: "Facebook",
-  //       tootlip: "Enlace a nuestro Facebook",
-  //       link: "https://m.facebook.com/RaiLabMacbook",
-  //     }),
-  //   },
-  //   contactTwitter: {
-  //     type: Object,
-  //     default: () => ({
-  //       body: "Twitter",
-  //       tootlip: "Enlace a nuestro Twitter",
-  //       link: "https://twitter.com/RailabMac",
-  //     }),
-  //   },
   // },
   
 };

@@ -17,6 +17,12 @@ module.exports = {
         utilitiesText: 'Utilidades'
 
     },
+    footer:{
+        about: {
+            tooltip: 'Página acerca de nosotros',
+            body: 'Acerca de nosotros'
+        },
+    },
     utilities: {
         navigationMenu: {
             label: 'Menu de Navegacion'

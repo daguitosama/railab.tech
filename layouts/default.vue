@@ -4,27 +4,22 @@
   >
     <AppNavigation />
     <Nuxt />
-    <div class="h-40"></div>
+    <AppFooter />
   </div>
 </template>
 
 
 <script>
 import AppNavigation from "@/components/app/AppNavigation.vue";
+import AppFooter from "@/components/app/AppFooter.vue";
 export default {
   components: {
     AppNavigation,
+    AppFooter
   },
   head() {
-    let bodyAttrs = {
-      bodyAttrs: {
-        class: [
-          "font-sans antialiased bg-surface-light text-onLight dark:bg-surface-dark dark:text-onDark transition-colors duration-300 ease-linear ",
-        ],
-      },
-    };
-    return Object.assign({}, this.$nuxtI18nSeo(), bodyAttrs);
+    
+    return Object.assign({}, this.$nuxtI18nSeo());
   },
-  
 };
 </script>

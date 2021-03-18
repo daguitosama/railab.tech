@@ -1,6 +1,4 @@
 <template>
-<!-- viewBox="0 0 48 48" width="24px" height="24px" -->
-  
   <svg
     width="24px" height="24px"
     viewBox="0 0 48 48"

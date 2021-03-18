@@ -3,7 +3,7 @@
     <div class="container">
       <SectionContactItems />
       <ContactMap />
-      <SectionContactForm class="mt-32" />
+      <SectionContactForm class="py-32" />
     </div>
   </div>
 </template>

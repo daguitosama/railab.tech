@@ -23,7 +23,7 @@ export default {
     // 
     bodyAttrs: {
       class: [
-        'bg-surface-light text-onLight dark:bg-surface-dark dark:text-onDark transition-colors duration-300 ease-linear'
+        "font-sans antialiased bg-surface-light text-onLight dark:bg-surface-dark dark:text-onDark transition-colors duration-300 ease-linear ",
       ]
     }
   },
@@ -47,7 +47,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
   ],
-  
+
   colorMode: {
     classSuffix: ''
   },
@@ -88,7 +88,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    
+
   },
 
   postcss: {
@@ -102,6 +102,6 @@ export default {
   tailwindcss: {
     jit: true
   }
-  
+
 
 }
