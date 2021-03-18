@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <main id="main-content">
     <div class="container">
     <SectionIntro />
     <ServiceItemList />
@@ -7,7 +7,7 @@
     <SectionSello />
     </div>
     <ContactShorcut/>
-  </div>
+  </main>
 </template>
 
 <script>
