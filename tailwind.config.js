@@ -7,8 +7,14 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#006ee6',
-          dark: '#0055b3'
+          light: {
+            DEFAULT:'#006ee6',
+            hover:'#0055b3'
+          },
+          dark: {
+            DEFAULT:'#0055b3',
+            hover:'#0062cc'
+          }
         },
         onLight: '#20233c',
         onDark: '#dbdde0',

@@ -1,6 +1,6 @@
 <template>
   <section class="text-center flex flex-col items-center">
-    <AppHeading class="max-w-md" :sectionHeading="sectionHeading" />
+    <AppHeading class="max-w-md" :sectionHeading="$t('services.QualityStamp.heading')" />
     <div class="mt-20">
       <div
         class="w-16 h-16 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center from-blue-400 to-blue-800"
@@ -13,16 +13,16 @@
     </div>
 
     <div class="mt-10  max-w-md">
-      <p class="text-lg  opacity-75">{{ description.paragraph1 }}</p>
+      <p class="text-lg  opacity-75">{{ $t('services.QualityStamp.paragraph1') }}</p>
       <ul class="mt-2 ml-4 text-lg ">
-        <li v-for="(e, i) in description.list1" :key="i">
+        <li v-for="(e, i) in $t('services.QualityStamp.list1')" :key="i">
           {{ e }}
         </li>
       </ul>
 
-      <p class="text-lg mt-10 opacity-75">{{ description.paragraph2 }}</p>
+      <p class="text-lg mt-10 opacity-75">{{ $t('services.QualityStamp.paragraph2') }}</p>
       <ul class="mt-2 ml-4 text-lg ">
-        <li v-for="(e, i) in description.list2" :key="i">
+        <li v-for="(e, i) in $t('services.QualityStamp.list2')" :key="i">
           {{ e }}
         </li>
       </ul>

@@ -4,16 +4,16 @@
       class="bg-gray-100 dark:bg-gray-800   py-32 text-center "
     >
       <h2 class="font-extrabold text-3xl md:text-5xl opacity-80">
-        {{ contactText }}
+        {{ $t('contact.shortcut.heading') }}
       </h2>
       <div class="mt-4">
-        <a 
-        :href="contactLink.link" 
-        :title="contactLink.tooltip"
+        <nuxt-link 
+        :to="localePath($t('contact.shortcut.cta.pageName'))" 
+        :title="$t('contact.shortcut.cta.tooltip')"
         class="text-lg  font-semibold opacity-75 hover:opacity-100 transform transition-opacity duration-150"
         >
-          {{ contactLink.body }} →
-        </a>
+          {{ $t('contact.shortcut.cta.body') }}
+        </nuxt-link>
         
       </div>
     </div>

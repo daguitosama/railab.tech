@@ -1,7 +1,10 @@
 <template>
   <div>
-    <AppHeading :sectionHeading="heading" class="text-center" />
-    <div class="relative mt-10  h-80 md:h-96">
+    <AppHeading
+      :sectionHeading="$t('contact.whereToFindUs')"
+      class="text-center"
+    />
+    <div class="relative mt-10 h-80 md:h-96">
       <div class="rounded-lg overflow-hidden" ref="mapConatiner">
         <iframe
           v-if="mapNeeded"
@@ -21,12 +24,11 @@
         <div
           class="max-w-15 md:max-w-sm py-3 px-4 md:px-8 md:py-6 -mb-16 sm:-mb-12 shadow-lg text-center rounded-2xl bg-white dark:bg-gray-800 text-onLight dark:text-onDark"
         >
-          <address>{{ address }}</address>
-          <p class="mt-2">{{ scheduleTimeStr }}</p>
+          <address>{{ $t("contact.address") }}</address>
+          <p class="mt-2">{{ $t("contact.scheduleTimeStr") }}</p>
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 

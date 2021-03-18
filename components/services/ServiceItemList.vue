@@ -1,9 +1,9 @@
 <template>
-  <section class="mt-32">
+  <section class="">
     <AppHeading
-      class="max-w-md"
-      :sectionHeading="sectionHeading"
-      :sectionHadingId="sectionHadingId"
+      class="max-w-md pt-32"
+      :sectionHeading="$t('services.list.heading')"
+      :sectionHeadingId="'services-listings'"
     />
 
     <div class="mt-14 md:mt-20">
@@ -11,73 +11,73 @@
         class="space-y-14 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-9 md:gap-y-14 lg:grid-cols-3"
       >
         <li>
-          <ServiceItem :serviceItem="serviceItems[0]">
+          <ServiceItem :serviceItem="$t('services.list.items')[0]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[1]">
+          <ServiceItem :serviceItem="$t('services.list.items')[1]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[2]">
+          <ServiceItem :serviceItem="$t('services.list.items')[2]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[3]">
+          <ServiceItem :serviceItem="$t('services.list.items')[3]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[4]">
+          <ServiceItem :serviceItem="$t('services.list.items')[4]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[5]">
+          <ServiceItem :serviceItem="$t('services.list.items')[5]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[0].iconTitle"
+              :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[6]">
+          <ServiceItem :serviceItem="$t('services.list.items')[6]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[6].iconTitle"
+              :title="$t('services.list.items')[6].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="serviceItems[7]">
+          <ServiceItem :serviceItem="$t('services.list.items')[7]">
             <Eye
               class="text-white fill-current"
-              :title="serviceItems[7].iconTitle"
+              :title="$t('services.list.items')[7].iconTitle"
             />
           </ServiceItem>
         </li>

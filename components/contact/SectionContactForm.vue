@@ -2,7 +2,7 @@
   <section class="mt-20 lg:mt-24">
     <div class="font-extrabold text-4xl text-center">
       <h1 >
-        {{ heading }}
+        {{ $t('contact.leaveUsAMessage') }}
       </h1>
     </div>
     <div class="mt-10  max-w-xs mx-auto">
