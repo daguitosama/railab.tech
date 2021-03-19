@@ -14,7 +14,7 @@ module.exports = {
             body: 'Contact'
         },
         linksText: 'Links',
-        socialText: 'Comunity',
+        socialText: 'Community',
         utilitiesText: 'Utilities'
 
     },
@@ -26,7 +26,7 @@ module.exports = {
             },
         },
         comunity: {
-            title:'Comunity',
+            title:'Community',
             telegramLink: {
                 body: "Telegram",
                 tootlip: "Our Telegram group",
@@ -238,10 +238,10 @@ module.exports = {
             heading: 'Technical Advise',
             cta: {
                 body: 'Go to the group →',
-                tooltip: 'Our Mac comunity on Telegram',
+                tooltip: 'Our Mac community on Telegram',
                 link: 'https://t.me/RailabMac'
             },
-            description: `Not all problems are so critical. We have a comunity to share information an knowledge on Telegram. If you want to learn how to solve this problems or to ask something join us at " Railab Macbook Support " Telegram group. The objective is share experiences and help Mac users to solve everyday problems. It works like a forum. The solution of those comun problems might be there.`
+            description: `Not all problems are so critical. We have a community to share information an knowledge on Telegram. If you want to learn how to solve this problems or to ask something join us at " Railab Macbook Support " Telegram group. The objective is share experiences and help Mac users to solve everyday problems. It works like a forum. The solution of those comun problems might be there.`
         },
         QualityStamp: {
             heading: 'Railab\'s Quality Stamp',
@@ -259,6 +259,14 @@ module.exports = {
             ],
         }
 
+    },
+    about:{
+        heading:'About us',
+        description:{
+            p1:`Our worshop isn't designed to look as a boutique, to impress with the beauty of our installations. When you arrive, you will see heat stations, microscope, power supply units for test, disassembled Macbooks in repair process and much more...`,
+            p2:`An under control disorder of the day workload of our workshop. We have no receptionist. Knoke our door and will be kindly welcomed by the same technician that will start the troubleshooting of your device and will produce the solution of your problem.`,
+            p3:`We have 6 years and counting of experience helping the Mac community in Cuba.`
+        }
     }
 
 }

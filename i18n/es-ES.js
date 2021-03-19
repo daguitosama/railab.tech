@@ -258,6 +258,14 @@ module.exports = {
                 `Usar Cargador Apple original del wattage adecuado`,
             ],
         }
+    },
+    about:{
+        heading:'Acerca de nosotros',
+        description:{
+            p1:`Nuestro taller no está diseñado para lucir como una boutique e impresionar con la belleza de nuestras instalaciones. Cuando llegue verá estaciones de calor, microscopio, fuente de prueba, Macbook’s desarmados en proceso de reparación y más…..`,
+            p2:`Eso si, un desorden controlado de todo taller con carga diaria de trabajo. No será recibido por un recepcionista. Toque nuestra puerta y será amablemente recibido por el mismo técnico que se pondrá manos a la obra para la defectación y solución de su problema.`,
+            p3:`Contamos con 6 años de experiencia ayudando a la comunidad Mac en Cuba.`
+        }
     }
 
 }
