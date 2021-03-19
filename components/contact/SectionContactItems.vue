@@ -12,7 +12,7 @@
         </li>
 
         <li>
-          <ContactItem :contactItem="$t('contact.contactTelegram')">
+          <ContactItem :contactItem="$t('contact.contactPersonalTelegram')">
             <Telegram :title="$t('icons.Telegram.title')" />
           </ContactItem>
         </li>

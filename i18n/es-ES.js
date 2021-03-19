@@ -65,6 +65,11 @@ module.exports = {
             tootlip: "Nuestro número de teléfono",
             link: "tel:5354132120",
         },
+        contactPersonalTelegram:{
+            body: "Telegram",
+            tootlip: "Nuestra cuenta personal de Telegram",
+            link: "https://t.me/RaikMac",
+        },
         contactTelegram: {
             body: "Telegram",
             tootlip: "Enlace a nuestro grupo de Telegram",
