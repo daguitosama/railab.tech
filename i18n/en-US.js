@@ -14,15 +14,37 @@ module.exports = {
             body: 'Contact'
         },
         linksText: 'Links',
-        socialText: 'Social',
+        socialText: 'Comunity',
         utilitiesText: 'Utilities'
 
     },
-    footer:{
-        about: {
-            tooltip: 'About us page',
-            body: 'About us'
+    footer: {
+        links: {
+            about: {
+                tooltip: 'About us page',
+                body: 'About us'
+            },
         },
+        comunity: {
+            title:'Comunity',
+            telegramLink: {
+                body: "Telegram",
+                tootlip: "Our Telegram group",
+                link: "https://t.me/RailabMac",
+            },
+            facebookLink: {
+                body: "Facebook",
+                tootlip: "Our Facebook page",
+                link: "https://m.facebook.com/RaiLabMacbook",
+            },
+            twitterLink: {
+                body: "Twitter",
+                tootlip: "Our Twitter account",
+                link: "https://twitter.com/RailabMac",
+            },
+        },
+        
+
     },
     utilities: {
         navigationMenu: {
@@ -79,9 +101,9 @@ module.exports = {
                 sendingLabel: 'Sending'
             }
         },
-        shortcut:{
-            heading:'Contact us',
-            cta:{
+        shortcut: {
+            heading: 'Contact us',
+            cta: {
                 body: 'Go to the contact page →',
                 tooltip: 'Our contact page',
                 pageName: 'contact'
@@ -212,14 +234,14 @@ module.exports = {
                 },
             ],
         },
-        techAdvise:{
-            heading:'Technical Advise',
+        techAdvise: {
+            heading: 'Technical Advise',
             cta: {
                 body: 'Go to the group →',
                 tooltip: 'Our Mac comunity on Telegram',
                 link: 'https://t.me/RailabMac'
             },
-            description:`Not all problems are so critical. We have a comunity to share information an knowledge on Telegram. If you want to learn how to solve this problems or to ask something join us at " Railab Macbook Support " Telegram group. The objective is share experiences and help Mac users to solve everyday problems. It works like a forum. The solution of those comun problems might be there.`
+            description: `Not all problems are so critical. We have a comunity to share information an knowledge on Telegram. If you want to learn how to solve this problems or to ask something join us at " Railab Macbook Support " Telegram group. The objective is share experiences and help Mac users to solve everyday problems. It works like a forum. The solution of those comun problems might be there.`
         },
         QualityStamp: {
             heading: 'Railab\'s Quality Stamp',

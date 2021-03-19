@@ -13,15 +13,36 @@ module.exports = {
             body: 'Contacto'
         },
         linksText: 'Enlaces',
-        socialText: 'Redes Sociales',
+        socialText: 'Comunidad',
         utilitiesText: 'Utilidades'
 
     },
-    footer:{
-        about: {
-            tooltip: 'Página acerca de nosotros',
-            body: 'Acerca de nosotros'
+    footer: {
+        links: {
+            about: {
+                tooltip: 'Página acerca de nosotros',
+                body: 'Acerca de nosotros'
+            },
         },
+        comunity: {
+            title:'Comunidad',
+            telegramLink: {
+                body: "Telegram",
+                tootlip: "Enlace a nuestro grupo de Telegram",
+                link: "https://t.me/RailabMac",
+            },
+            facebookLink: {
+                body: "Facebook",
+                tootlip: "Enlace a nuestro Facebook",
+                link: "https://m.facebook.com/RaiLabMacbook",
+            },
+            twitterLink: {
+                body: "Twitter",
+                tootlip: "Enlace a nuestro Twitter",
+                link: "https://twitter.com/RailabMac",
+            },
+        },
+        
     },
     utilities: {
         navigationMenu: {
@@ -78,9 +99,9 @@ module.exports = {
                 sendingLabel: 'Enviando'
             }
         },
-        shortcut:{
-            heading:'Contáctenos',
-            cta:{
+        shortcut: {
+            heading: 'Contáctenos',
+            cta: {
                 body: 'Ir a la página de contacto →',
                 tooltip: 'Nuestra página de contacto',
                 pageName: 'contact'

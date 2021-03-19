@@ -24,13 +24,13 @@
             <ul class="mt-4 space-y-3 text-sm">
               <li>
                 <p class="text-sm font-semibold opacity-80">
-                  {{ $t("navigation.socialText") }}
+                  {{ $t("footer.comunity.title") }}
                 </p>
               </li>
 
               <li>
                 <AppFooterSocialItem
-                  :footerSocialItem="$t('contact.contactTelegram')"
+                  :footerSocialItem="$t('footer.comunity.telegramLink')"
                 >
                   <Telegram :title="$t('icons.Telegram.title')" class="h-4 w-4" />
                 </AppFooterSocialItem>
@@ -38,15 +38,7 @@
 
               <li>
                 <AppFooterSocialItem
-                  :footerSocialItem="$t('contact.contactWhatsApp')"
-                >
-                  <WhatsApp :title="$t('icons.WhatsApp.title')" class="h-4 w-4" />
-                </AppFooterSocialItem>
-              </li>
-
-              <li>
-                <AppFooterSocialItem
-                  :footerSocialItem="$t('contact.contactFacebook')"
+                  :footerSocialItem="$t('footer.comunity.facebookLink')"
                 >
                   <Facebook :title="$t('icons.Facebook.title')" class="h-4 w-4" />
                 </AppFooterSocialItem>
@@ -54,7 +46,7 @@
 
               <li>
                 <AppFooterSocialItem
-                  :footerSocialItem="$t('contact.contactTwitter')"
+                  :footerSocialItem="$t('footer.comunity.twitterLink')"
                 >
                   <Twitter :title="$t('icons.Twitter.title')" class="h-4 w-4" />
                 </AppFooterSocialItem>
@@ -101,9 +93,9 @@ export default {
         },
         {
           path: "about",
-          tooltipLocation: "footer.about.tooltip",
+          tooltipLocation: "footer.links.about.tooltip",
           localePath: "about",
-          bodyLocation: "footer.about.body",
+          bodyLocation: "footer.links.about.body",
         },
       ],
     };

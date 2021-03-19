@@ -65,14 +65,6 @@
                   <li>
                     <ContactItemButton
                       role="menuitem"
-                      :contactItem="$t('contact.contactWhatsApp')"
-                    >
-                      <WhatsApp :title="$t('icons.WhatsApp.title')" />
-                    </ContactItemButton>
-                  </li>
-                  <li>
-                    <ContactItemButton
-                      role="menuitem"
                       :contactItem="$t('contact.contactFacebook')"
                     >
                       <Facebook :title="$t('icons.Facebook.title')" />
