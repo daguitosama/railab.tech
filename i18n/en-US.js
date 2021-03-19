@@ -99,7 +99,9 @@ module.exports = {
             sendButton: {
                 normalLabel: 'Send',
                 sendingLabel: 'Sending'
-            }
+            },
+            sendError:'Something just happen when we where sending your message. Please try again.',
+            sendedMessage:'Tanks for reach us. We will replay you back shortly 👍️',
         },
         shortcut: {
             heading: 'Contact us',

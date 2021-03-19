@@ -36,6 +36,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/composition-api.js',
+    '~/plugins/api.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -55,7 +56,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxt/http',
   ],
   // i18n
   i18n: {
@@ -84,6 +86,12 @@ export default {
     langDir: 'i18n/'
   },
 
+  // http
+  http: {
+    // proxyHeaders: false
+    clientTimeout: 10e4,
+    browserBaseURL: process.env.NODE_ENV === "development" ? `http://localhost` : 'https://railab.tech'
+  },
 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

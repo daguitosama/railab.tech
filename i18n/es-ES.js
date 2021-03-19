@@ -97,7 +97,9 @@ module.exports = {
             sendButton: {
                 normalLabel: 'Enviar',
                 sendingLabel: 'Enviando'
-            }
+            },
+            sendError:'Algo pasó mientras enviavamos su mensaje. Por favor intente otra vez.',
+            sendedMessage:'Gracias por escribirnos. Le responderemos en brebe 👍️',
         },
         shortcut: {
             heading: 'Contáctenos',

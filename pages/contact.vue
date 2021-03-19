@@ -3,7 +3,7 @@
     <div class="container">
       <SectionContactItems />
       <ContactMap />
-      <SectionContactForm class="py-32" />
+      <SectionContactForm class="py-32"  />
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
     SectionContactForm,
     ContactMap,
   },
+  
 };
 </script>
 
