@@ -25,6 +25,12 @@ export default {
     SectionSello,
     ContactShorcut,
   },
+  head(){
+    return {
+      title: this.$t('services.head.title'),
+      titleTemplate: '%s | Railab'
+    }
+  }
 };
 </script>
 

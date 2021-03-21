@@ -59,6 +59,9 @@ module.exports = {
     },
 
     contact: {
+        head:{
+            title:'Contáctenos'
+        },
         contactHeading: "Contáctenos",
         contactPhone: {
             body: "(+53) 5 413 21 20",
@@ -134,7 +137,11 @@ module.exports = {
         },
     },
 
+    
     services: {
+        head:{
+            title:'Servicio de reparacion de Macbooks, iMacs y Macs'
+        },
         intro: {
             heading: 'Repara tu Mac en Cuba',
             subHeading: 'Transparencia y calidad garantizadas',
@@ -267,6 +274,9 @@ module.exports = {
         }
     },
     about:{
+        head:{
+            title:'Acerca de nosotros'
+        },
         heading:'Acerca de nosotros',
         description:{
             p1:`Nuestro taller no está diseñado para lucir como una boutique e impresionar con la belleza de nuestras instalaciones. Cuando llegue verá estaciones de calor, microscopio, fuente de prueba, Macbook’s desarmados en proceso de reparación y más…..`,

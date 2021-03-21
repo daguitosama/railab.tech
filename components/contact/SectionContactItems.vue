@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-10">
     <AppHeading :sectionHeading="$t('contact.contactHeading')" class="text-center" />
     <div class="mt-10 flex flex-col items-center">
       <ul

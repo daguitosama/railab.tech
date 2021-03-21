@@ -19,7 +19,12 @@ export default {
     SectionContactForm,
     ContactMap,
   },
-  
+  head(){
+    return {
+      title: this.$t('contact.head.title'),
+      titleTemplate: '%s | Railab'
+    }
+  }
 };
 </script>
 

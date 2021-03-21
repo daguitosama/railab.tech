@@ -30,6 +30,12 @@ export default {
       default: "About us description",
     },
   },
+  head(){
+    return {
+      title: this.$t('about.head.title'),
+      titleTemplate: '%s | Railab'
+    }
+  }
 };
 </script>
 

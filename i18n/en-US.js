@@ -61,6 +61,9 @@ module.exports = {
     },
 
     contact: {
+        head:{
+            title:'Contact us'
+        },
         contactHeading: "Contact us",
         contactPhone: {
             body: "(+53) 5 413 21 20",
@@ -137,6 +140,9 @@ module.exports = {
     },
 
     services: {
+        head:{
+            title:'Macbook, iMac and Mac repair service'
+        },
         intro: {
             heading: 'Repair your Mac in Cuba',
             subHeading: 'We guarantee transparency and quality',
@@ -264,10 +270,12 @@ module.exports = {
                 `Battery live over 85%.`,
                 `Original Apple Charger usage with the optimal wattage.`,
             ],
-        }
-
+        },
     },
     about:{
+        head:{
+            title:'About us'
+        },
         heading:'About us',
         description:{
             p1:`Our worshop isn't designed to look as a boutique, to impress with the beauty of our installations. When you arrive, you will see heat stations, microscope, power supply units for test, disassembled Macbooks in repair process and much more...`,
