@@ -13,7 +13,9 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Servicio de Reparación de Macbooks, iMacs y Macs. Habana Cuba.' },
+      { hid: 'og:title', property: 'og:title', content: 'Railab' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Railab' },
+      { hid: 'og:description', property: 'og:description', content: 'Railab' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
 
       { hid: 'twitter:site', name: 'twitter:site', content: '@RailabMac' },

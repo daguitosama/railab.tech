@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <div class="container flex flex-col items-center">
       <AppHeading :sectionHeading="$t('about.heading')" />
-      <div class="mt-6 space-y-4 max-w-xs opacity-80 ">
+      <div class="mt-6 space-y-4 max-w-xs opacity-80">
         <p class="">{{ $t("about.description.p1") }}</p>
         <p class="">{{ $t("about.description.p2") }}</p>
         <p class="">{{ $t("about.description.p3") }}</p>
@@ -30,12 +30,19 @@ export default {
       default: "About us description",
     },
   },
-  head(){
+  head() {
     return {
-      title: this.$t('about.head.title'),
-      titleTemplate: '%s | Railab'
-    }
-  }
+      title: this.$t("about.head.title"),
+      titleTemplate: "%s | Railab",
+      meta: [
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.$t("about.head.title"),
+        },
+      ],
+    };
+  },
 };
 </script>
 

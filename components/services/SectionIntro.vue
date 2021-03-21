@@ -3,7 +3,7 @@
     <div class="md:w-1/2 mt-10">
       <div>
         <h1
-          class="font-black text-6xl text-center md:text-left"
+          class="font-black text-5xl xl:text-6xl text-center md:text-left"
         >
           {{ $t("services.intro.heading") }}
         </h1>
