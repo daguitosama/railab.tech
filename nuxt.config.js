@@ -12,7 +12,36 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      // { hid: 'description', name: 'description', content: 'Servicio de Reparacio' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Railab' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+
+      { hid: 'twitter:site', name: 'twitter:site', content: '@RailabMac' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://railab.tech/img/railab-social-image-1500x500.jpg'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://railab.tech/img/railab-social-image-1500x500.jpg'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Railab'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://railab.tech/img/railab-social-image-1500x500.jpg'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
