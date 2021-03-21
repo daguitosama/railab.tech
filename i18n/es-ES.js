@@ -140,7 +140,8 @@ module.exports = {
     
     services: {
         head:{
-            title:'Servicio de reparacion de Macbooks, iMacs y Macs'
+            title:'Servicio de reparacion de Macbooks, iMacs y Macs',
+            description:"Servicio de Reparación de Macbooks, iMacs y Macs. Habana Cuba."
         },
         intro: {
             heading: 'Repara tu Mac en Cuba',

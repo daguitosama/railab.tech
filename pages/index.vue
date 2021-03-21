@@ -1,12 +1,12 @@
 <template>
   <main id="main-content">
     <div class="container">
-    <SectionIntro />
-    <ServiceItemList />
-    <SectionTelegram />
-    <SectionSello />
+      <SectionIntro />
+      <ServiceItemList />
+      <SectionTelegram />
+      <SectionSello />
     </div>
-    <ContactShorcut/>
+    <ContactShorcut />
   </main>
 </template>
 
@@ -25,12 +25,19 @@ export default {
     SectionSello,
     ContactShorcut,
   },
-  head(){
+  head() {
     return {
-      title: this.$t('services.head.title'),
-      titleTemplate: '%s | Railab'
-    }
-  }
+      title: this.$t("services.head.title"),
+      titleTemplate: "%s | Railab",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:this.$t("services.head.description"),
+        },
+      ],
+    };
+  },
 };
 </script>
 
