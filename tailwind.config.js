@@ -23,6 +23,8 @@ module.exports = {
           dark: '#2C3E50'
         },
         ...colors,
+        gray: colors.blueGray,
+
       },
       spacing: {
         '1/2': '50%',
