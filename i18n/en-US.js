@@ -62,7 +62,9 @@ module.exports = {
 
     contact: {
         head:{
-            title:'Contact us'
+            title:'Contact us',
+            description:'Our contact information'
+
         },
         contactHeading: "Contact us",
         contactPhone: {
@@ -165,7 +167,6 @@ module.exports = {
             heading: 'The Services you are looking for',
             items: [
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Repair",
                     textContent: null,
@@ -180,7 +181,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Maintenance",
                     textContent: null,
@@ -192,7 +192,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Free Troubleshooting",
                     textContent: `You don't need to pay anything for Troubleshooting. We disassemble your machine and then we tell you the posible origin of the problem. 
@@ -201,7 +200,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Upgrade",
                     textContent: null,
@@ -212,7 +210,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Warranty",
                     textContent: `In Railab you will have a hole month at least of Warranty. We work for offer you the tranquillity  of your Mac is not going back to the workshop.`,
@@ -220,7 +217,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Software",
                     textContent: null,
@@ -231,7 +227,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Make money with Railab",
                     textContent: `We buy broken  Macs to obtain  components and parts we need to do our job. 
@@ -240,7 +235,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Contract with State Companies",
                     textContent: `We operate under licence and just in case of a State Company or an Embassy, we work with non Apple devices.`,
@@ -275,7 +269,9 @@ module.exports = {
     },
     about:{
         head:{
-            title:'About us'
+            title:'About us',
+            description:'More the six years helping the  Mac community in Cuba.'
+
         },
         heading:'About us',
         description:{

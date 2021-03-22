@@ -30,7 +30,6 @@ export default {
       title: this.$t("services.head.title"),
       titleTemplate: "%s | Railab",
       meta: [
-        
 
         {
           hid: "description",

@@ -1,25 +1,45 @@
 <template>
-  <section class="text-center flex flex-col items-center">
-    <AppHeading class="max-w-md" :sectionHeading="$t('services.techAdvise.heading')" />
-    <div class="mt-20">
-      <div
-        class="w-16 h-16 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center from-blue-400 to-blue-800"
-      >
-        <Plane
-          title="Plane"
-          class="text-white fill-current transform rotate-45 ml-2 mb-1"
-        />
-      </div>
-    </div>
-    <div class=" mt-3">
-      <a 
-      :href="$t('services.techAdvise.cta.link')"
-      :title="$t('services.techAdvise.cta.tooltip')" 
-      class=" text-lg opacity-70 hover:opacity-100 transition-opacity duration-150 font-semibold">{{ $t('services.techAdvise.cta.body') }}</a>
-    </div>
+  <section class="min-h-screen flex items-center justify-center">
+    <div class="w-full">
+      <AppHeading
+        class="max-w-md"
+        :sectionHeading="$t('services.techAdvise.heading')"
+      />
+      <div class="flex">
+        <!-- text -->
+        <div class="w-full md:w-1/2">
+          <!-- telegram icon TODO -->
+          <div class="mt-12 ">
+            <div
+              class="w-16 h-16 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center from-blue-400 to-blue-800"
+            >
+              <Plane
+                title="Plane"
+                class="text-white fill-current transform rotate-45 ml-2 mb-1"
+              />
+            </div>
+            <div class="mt-3">
+              <a
+                :href="$t('services.techAdvise.cta.link')"
+                :title="$t('services.techAdvise.cta.tooltip')"
+                class="text-lg opacity-70 hover:opacity-100 transition-opacity duration-150 font-semibold"
+                >{{ $t("services.techAdvise.cta.body") }}</a
+              >
+            </div>
+          </div>
 
-    <div class="mt-10">
-        <p class="text-lg opacity-75  max-w-md"> {{$t('services.techAdvise.description')}} </p>
+          <!-- copy -->
+          <div class="mt-10">
+            <p class="opacity-75 max-w-md">
+              {{ $t("services.techAdvise.description") }}
+            </p>
+          </div>
+        </div>
+        <!-- scene -->
+        <div class="hidden md:block h-full w-5/12 my-auto mx-auto">
+          <ScenePeps />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -32,6 +52,7 @@ export default {
   components: {
     Plane,
     AppHeading,
+    ScenePeps: () => import("@/components/illustations/ScenePeps.vue"),
   },
   props: {
     sectionHeading: {
@@ -46,10 +67,10 @@ export default {
         tooltip: "",
       }),
     },
-    description:{
-        type:String,
-        default:``
-    }
+    description: {
+      type: String,
+      default: ``,
+    },
   },
 };
 </script>

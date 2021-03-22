@@ -35,10 +35,23 @@ export default {
       title: this.$t("about.head.title"),
       titleTemplate: "%s | Railab",
       meta: [
+
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("about.head.description"),
+        },
+        
+        // og
         {
           hid: "og:title",
           property: "og:title",
           content: this.$t("about.head.title"),
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$t("about.head.description"),
         },
       ],
     };

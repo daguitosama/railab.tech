@@ -60,7 +60,9 @@ module.exports = {
 
     contact: {
         head:{
-            title:'Contáctenos'
+            title:'Contáctenos',
+            description:'Nuestras opciones de Contacto'
+
         },
         contactHeading: "Contáctenos",
         contactPhone: {
@@ -164,7 +166,6 @@ module.exports = {
             heading: 'Los Servicios que está buscando',
             items: [
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Reparación",
                     textContent: null,
@@ -179,7 +180,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Mantenimiento",
                     textContent: null,
@@ -191,7 +191,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Defectación Gratuita",
                     textContent: `Ud. no necesita abonar dinero alguno. Desarmamos su equipo y le comunicamos las posibles causas de la rotura. 
@@ -200,7 +199,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Upgrade",
                     textContent: null,
@@ -211,7 +209,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Garantía",
                     textContent: `En Railab ud. tendrá un mes mínimo de garantía. Trabajamos para ofrecerle la tranquilidad de que el equipo no regresará al taller.`,
@@ -219,7 +216,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Software",
                     textContent: null,
@@ -230,7 +226,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Gane dinero con Railab",
                     textContent: `Compramos Mac rotas para obtener componentes y partes necesarias para nuestro trabajo. 
@@ -239,7 +234,6 @@ module.exports = {
                 },
 
                 {
-                    iconColors: "from-cyan-400 to-cyan-800",
                     iconTitle: "Eye",
                     title: "Contrato con entidades estatales",
                     textContent: `Operamos bajo licencia y solo para el caso de entidades estatales y embajadas, trabajamos ordenadores de otras marcas que no sea Apple. 
@@ -276,7 +270,8 @@ module.exports = {
     },
     about:{
         head:{
-            title:'Acerca de nosotros'
+            title:'Acerca de nosotros',
+            description:'Mas de seis ańos ayudando a la comunidad Mac en Cuba'
         },
         heading:'Acerca de nosotros',
         description:{

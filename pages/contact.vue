@@ -24,10 +24,16 @@ export default {
       title: this.$t('contact.head.title'),
       titleTemplate: '%s | Railab',
       meta: [
+        // og
         {
           hid: "og:title",
           property: "og:title",
           content: this.$t("contact.head.title"),
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$t("contact.head.description"),
         },
       ],
     }
