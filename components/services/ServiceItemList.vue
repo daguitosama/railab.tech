@@ -11,77 +11,96 @@
         class="space-y-14 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-9 md:gap-y-14 lg:grid-cols-3"
       >
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[0]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem
+            :serviceItem="$t('services.list.items')[0]"
+            :iconColors="'from-teal-400 to-cyan-800'"
+          >
+            <Cog
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[1]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem :serviceItem="$t('services.list.items')[1]"
+            :iconColors="'from-cyan-400 to-blue-800'"
+          >
+            <Refresh
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[2]">
+          <ServiceItem
+            :serviceItem="$t('services.list.items')[2]"
+            :iconColors="'from-purple-400 to-indigo-800'"
+          >
             <Eye
-              class="text-white fill-current"
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[3]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem
+            :serviceItem="$t('services.list.items')[3]"
+            :iconColors="'from-pink-400 to-red-800'"
+          >
+            <TrendingUp
+              class="text-white w-7 h-7"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[4]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem
+            :serviceItem="$t('services.list.items')[4]"
+            :iconColors="'from-indigo-400 to-fuchsia-800'"
+          >
+            <Badge
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[5]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem :serviceItem="$t('services.list.items')[5]"
+            :iconColors="'from-yellow-400 to-violet-800'"
+          >
+            <CloudDown
+              class="text-white w-7 h-7"
               :title="$t('services.list.items')[0].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[6]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem :serviceItem="$t('services.list.items')[6]"
+            :iconColors="'from-lime-400 to-emerald-800'"
+          >
+            <Cash
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[6].iconTitle"
             />
           </ServiceItem>
         </li>
 
         <li>
-          <ServiceItem :serviceItem="$t('services.list.items')[7]">
-            <Eye
-              class="text-white fill-current"
+          <ServiceItem :serviceItem="$t('services.list.items')[7]"
+            :iconColors="'from-rose-500 to-orange-800'"
+          >
+            <Library
+              class="text-white w-8 h-8"
               :title="$t('services.list.items')[7].iconTitle"
             />
           </ServiceItem>
         </li>
-
       </ul>
     </div>
   </section>
@@ -91,11 +110,25 @@
 import Eye from "@/components/icons/Eye.vue";
 import AppHeading from "@/components/app/AppHeading.vue";
 import ServiceItem from "@/components/services/ServiceItem.vue";
+import Cash from '@/components/icons/Cash.vue';
+import Cog from '@/components/icons/Cog.vue';
+import Refresh from '@/components/icons/Refresh.vue';
+import TrendingUp from '@/components/icons/TrendingUp.vue';
+import Badge from '@/components/icons/Badge.vue';
+import CloudDown from '@/components/icons/CloudDown.vue';
+import Library from '@/components/icons/Library.vue';
 export default {
   components: {
     Eye,
     AppHeading,
     ServiceItem,
+    Cash,
+    Cog,
+    Refresh,
+    TrendingUp,
+    Badge,
+    CloudDown,
+    Library
   },
   props: {
     sectionHeading: {
@@ -174,7 +207,7 @@ export default {
             "Instalación de Windows en Mac",
           ],
         },
-        
+
         {
           iconColors: "from-cyan-400 to-cyan-800",
           iconTitle: "Eye",

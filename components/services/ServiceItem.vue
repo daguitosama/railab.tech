@@ -2,7 +2,7 @@
   <article class="">
     <div
       class="w-12 h-12 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center"
-      :class="serviceItem.iconColors"
+      :class="iconColors"
     >
       <!-- icon slot -->
       <slot></slot>
@@ -22,10 +22,13 @@
 <script>
 export default {
   props: {
+    iconColors: {
+      type:String,
+      default:"from-cyan-400 to-cyan-800",
+    },
     serviceItem: {
       type: Object,
       default: () => ({
-        iconColors: "from-cyan-400 to-cyan-800",
         iconTitle: "title",
         title: `Service Title`,
         textContent: null,
