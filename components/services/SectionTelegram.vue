@@ -22,7 +22,7 @@
               <a
                 :href="$t('services.techAdvise.cta.link')"
                 :title="$t('services.techAdvise.cta.tooltip')"
-                class="text-lg opacity-70 hover:opacity-100 transition-opacity duration-150 font-semibold"
+                class="text-lg opacity-70 hover:opacity-100 transition-opacity duration-150 font-semibold focusable-on-visible"
                 >{{ $t("services.techAdvise.cta.body") }}</a
               >
             </div>

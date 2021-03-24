@@ -1,5 +1,5 @@
 <template>
-  <main id="main-content">
+  <div >
     <div class="container">
       <SectionIntro />
       <ServiceItemList />
@@ -7,7 +7,7 @@
       <SectionSello />
     </div>
     <ContactShorcut />
-  </main>
+  </div>
 </template>
 
 <script>
@@ -53,4 +53,6 @@ export default {
   },
 };
 </script>
+
+
 

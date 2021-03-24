@@ -84,3 +84,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 .container{
     @apply max-w-screen-xl mx-auto px-6 md:px-8 xl:px-0;
 }
+
+.focusable\-on\-visible{
+    @apply focus:outline-none focus-visible:ring rounded focus:opacity-100 focus-visible:ring-primary-light focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark;
+}

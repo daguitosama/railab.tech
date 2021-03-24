@@ -71,7 +71,7 @@
 
         <li>
           <ServiceItem :serviceItem="$t('services.list.items')[5]"
-            :iconColors="'from-yellow-400 to-violet-800'"
+            :iconColors="'from-teal-400 to-violet-800'"
           >
             <CloudDown
               class="text-white w-7 h-7"

@@ -1,5 +1,5 @@
 <template>
-  <article class="">
+  <article class="focusable-on-visible" tabindex="0">
     <div
       class="w-12 h-12 rounded-2xl shadow-md bg-gradient-to-br flex items-center justify-center"
       :class="iconColors"
