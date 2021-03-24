@@ -6,7 +6,7 @@
     <AppNavigation />
     <AppError />
     <AppNotification />
-    <main id="main-content" tabindex="0" class="focus-visible:outline-none focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark">
+    <main id="main-content" tabindex="0" class="focusable-on-visible">
       <Nuxt />
     </main>
     <AppFooter />
