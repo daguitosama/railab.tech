@@ -56,7 +56,6 @@
                 <ul class="flex items-center space-x-4">
                   <li>
                     <ContactItemButton
-                      role="menuitem"
                       :contactItem="$t('contact.contactTelegram')"
                     >
                       <Telegram :title="$t('icons.Telegram.title')" />
@@ -64,7 +63,6 @@
                   </li>
                   <li>
                     <ContactItemButton
-                      role="menuitem"
                       :contactItem="$t('contact.contactFacebook')"
                     >
                       <Facebook :title="$t('icons.Facebook.title')" />
@@ -72,7 +70,6 @@
                   </li>
                   <li>
                     <ContactItemButton
-                      role="menuitem"
                       :contactItem="$t('contact.contactTwitter')"
                     >
                       <Twitter :title="$t('icons.Twitter.title')" />
@@ -89,14 +86,12 @@
                   <li class="w-10 h-10">
                     <ColorModeCtrl
                       :label="$t('utilities.colorCtrl.label')"
-                      role="menuitem"
                       class="w-full h-full flex items-center justify-center"
                       svgClasses="w-6 h-6"
                     />
                   </li>
                   <li class="w-10 h-10">
                     <AppLangSwitcher
-                      role="menuitem"
                       :label="$t('utilities.navigationMenu.label')"
                     />
                   </li>
@@ -123,7 +118,6 @@
         <ul class="hidden md:flex space-x-8 text-lg" role="menubar">
           <li class="">
             <nuxt-link
-              role="menuitem"
               :to="localePath('/')"
               exact=""
               :title="$t('navigation.services.tooltip')"
@@ -134,7 +128,6 @@
           </li>
           <li class="">
             <nuxt-link
-              role="menuitem"
               :to="localePath('contact')"
               exact=""
               :title="$t('navigation.contact.tooltip')"
@@ -147,12 +140,10 @@
         <!-- desktop utilities -->
         <div class="hidden md:flex space-x-2">
           <ColorModeCtrl
-            role="menuitem"
             :label="$t('utilities.colorCtrl.label')"
           />
           <div class="w-8 h-8">
             <AppLangSwitcher
-              role="menuitem"
               :label="$t('utilities.navigationMenu.label')"
             />
           </div>
