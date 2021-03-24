@@ -1,7 +1,7 @@
 <template>
   <header
     id="main-navigation"
-    class="fixed top-0 left-0 w-full z-20 bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
+    class="fixed top-0 left-0 w-full z-30 bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
   >
     <!-- mobile -->
     <div class="md:hidden">
@@ -16,7 +16,7 @@
         </div>
 
         <!-- burger -->
-        <div class="relative z-20">
+        <div class="relative z-30">
           <AppNavigationBurgerButton
             :label="$t('utilities.navigationMenu.label')"
             v-on:toogle="toogleNav"
@@ -32,7 +32,7 @@
               class="px-6 py-7 z-10 w-full h-full overflow-y-auto bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
             >
               <!-- logo -->
-              <div class="w-28 z-20">
+              <div class="w-28 z-30">
                 <nuxt-link
                   :to="localePath('/')"
                   class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"

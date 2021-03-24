@@ -115,6 +115,7 @@ module.exports = {
         },
         shortcut: {
             heading: 'Contact us',
+            description:'Lets fix that Mac today.',
             cta: {
                 body: 'Go to the contact page →',
                 tooltip: 'Our contact page',

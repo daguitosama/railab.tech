@@ -1,6 +1,10 @@
 <template>
-  <footer class="py-10 bg-gray-50 dark:bg-gray-800">
-    <div class="container">
+  <footer class="mt-20 bg-gray-50 dark:bg-gray-800 relative">
+    <div>
+      <ContactShorcut />
+    </div>
+    <FooterCurve />
+    <div class="container pt-144 md:pt-80 pb-20">
       <header class=" ">
         <p class="text-sm opacity-80">© 2021 Railab</p>
       </header>
@@ -32,7 +36,10 @@
                 <AppFooterSocialItem
                   :footerSocialItem="$t('footer.comunity.telegramLink')"
                 >
-                  <Telegram :title="$t('icons.Telegram.title')" class="h-4 w-4" />
+                  <Telegram
+                    :title="$t('icons.Telegram.title')"
+                    class="h-4 w-4"
+                  />
                 </AppFooterSocialItem>
               </li>
 
@@ -40,7 +47,10 @@
                 <AppFooterSocialItem
                   :footerSocialItem="$t('footer.comunity.facebookLink')"
                 >
-                  <Facebook :title="$t('icons.Facebook.title')" class="h-4 w-4" />
+                  <Facebook
+                    :title="$t('icons.Facebook.title')"
+                    class="h-4 w-4"
+                  />
                 </AppFooterSocialItem>
               </li>
 
@@ -66,6 +76,8 @@ import Telegram from "@/components/icons/Telegram.vue";
 import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
+import FooterCurve from "@/components/illustations/FooterCurve.vue";
+import ContactShorcut from "@/components/contact/ContactShorcut.vue";
 
 export default {
   components: {
@@ -75,6 +87,9 @@ export default {
     WhatsApp,
     Facebook,
     Twitter,
+    FooterCurve,
+
+    ContactShorcut,
   },
   data() {
     return {

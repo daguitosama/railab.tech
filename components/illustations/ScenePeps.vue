@@ -83,26 +83,26 @@
     <title>example-scene-1</title>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Background">
-        <circle class="cls-1" cx="468.03" cy="386.5" r="386.5" />
+        <circle class="fill-current text-gray-300 dark:text-gray-500 transition-colors duration-300" cx="468.03" cy="386.5" r="386.5" />
       </g>
       <g id="Middle_ground" data-name="Middle ground">
-        <rect class="cls-2" x="445.53" y="218" width="237" height="367" />
-        <line class="cls-3" x1="398.03" y1="442" x2="641.03" y2="442" />
-        <line class="cls-3" x1="398.03" y1="466" x2="641.03" y2="466" />
-        <line class="cls-3" x1="398.03" y1="490" x2="641.03" y2="490" />
-        <line class="cls-3" x1="398.03" y1="514" x2="641.03" y2="514" />
-        <circle class="cls-4" cx="564.03" cy="325" r="62" />
+        <rect class="fill-current text-gray-400 dark:text-gray-600 transition-colors duration-300" x="445.53" y="218" width="237" height="367" />
+        <line class="stroke-current" x1="398.03" y1="442" x2="641.03" y2="442" />
+        <line class="stroke-current" x1="398.03" y1="466" x2="641.03" y2="466" />
+        <line class="stroke-current" x1="398.03" y1="490" x2="641.03" y2="490" />
+        <line class="stroke-current" x1="398.03" y1="514" x2="641.03" y2="514" />
+        <circle class="fill-current text-gray-300 dark:text-gray-500 transition-colors duration-300" cx="564.03" cy="325" r="62" />
         <rect class="cls-5" x="641.03" y="348.5" width="98" height="91" />
         <text class="cls-6" transform="translate(666.15 408.41) scale(0.6 1)">
           &lt; / &gt;
         </text>
         <rect class="cls-3" x="36.03" y="37.5" width="529" height="348" />
-        <line class="cls-3" x1="36.03" y1="56" x2="565.03" y2="56" />
-        <rect class="cls-3" x="74.53" y="87" width="159" height="159" />
-        <line class="cls-3" x1="264.03" y1="101" x2="507.03" y2="101" />
-        <line class="cls-3" x1="264.03" y1="125" x2="507.03" y2="125" />
-        <line class="cls-3" x1="264.03" y1="149" x2="507.03" y2="149" />
-        <line class="cls-3" x1="264.03" y1="173" x2="507.03" y2="173" />
+        <line class="stroke-current" x1="36.03" y1="56" x2="565.03" y2="56" />
+        <rect class="stroke-current" fill="none" x="74.53" y="87" width="159" height="159" />
+        <line class="stroke-current" x1="264.03" y1="101" x2="507.03" y2="101" />
+        <line class="stroke-current" x1="264.03" y1="125" x2="507.03" y2="125" />
+        <line class="stroke-current" x1="264.03" y1="149" x2="507.03" y2="149" />
+        <line class="stroke-current" x1="264.03" y1="173" x2="507.03" y2="173" />
         <polygon
           class="cls-7"
           points="154.03 129 110.73 204 197.33 204 154.03 129"
