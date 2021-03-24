@@ -89,6 +89,7 @@ export default {
     // '@nuxtjs/pwa',
     'nuxt-i18n',
     '@nuxt/http',
+    '@nuxtjs/sitemap',
   ],
   // i18n
   i18n: {
@@ -115,6 +116,17 @@ export default {
     seo: false,
     lazy: true,
     langDir: 'i18n/'
+  },
+  // sitemap
+  sitemap: {
+    hostname: 'https://railab.tech',
+    // shortcut notation (basic)
+    i18n: true,
+    // nuxt-i18n notation (advanced)
+    i18n: {
+      locales: ['en', 'es'],
+      // routesNameSeparator: '___'
+    }
   },
 
   // http
