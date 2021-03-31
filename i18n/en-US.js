@@ -98,6 +98,7 @@ module.exports = {
             link: "https://twitter.com/RailabMac",
         },
         whereToFindUs: 'Where to find us',
+        mapTitle:'Our localization on the map',
         address: 'General Lee e/ Vía Blanca y Pasaje Oeste',
         scheduleTimeStr: 'From 10am to 5pm',
         leaveUsAMessage: 'Drop us a line',

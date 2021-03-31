@@ -5,21 +5,7 @@
       class="text-center"
     />
     <div class="relative mt-10 h-80 md:h-96">
-      <div class="rounded-lg overflow-hidden" ref="mapConatiner">
-        <iframe
-          v-if="mapNeeded"
-          :src="mapSrc"
-          :title="mapTitle"
-          frameborder="0"
-          style="border: 0"
-          allowfullscreen
-          aria-hidden="false"
-          tabindex="0"
-          lazyload
-          loading="lazy"
-          class="absolute rounded-lg w-full h-full bg-primary-light"
-        ></iframe>
-      </div>
+      <Map/>
       <div class="w-full absolute bottom-0 z-10 flex justify-center">
         <div
           class="max-w-15 md:max-w-sm py-3 px-4 md:px-8 md:py-6 -mb-16 sm:-mb-12 shadow-lg text-center rounded-2xl bg-white dark:bg-gray-800 text-onLight dark:text-onDark"
@@ -36,9 +22,11 @@
 import { reactive, ref, toRefs, watch } from "@vue/composition-api";
 import { useElementVisibility } from "@vueuse/core";
 import AppHeading from "@/components/app/AppHeading.vue";
+import Map from '@/components/contact/Map.vue'
 export default {
   components: {
     AppHeading,
+    Map
   },
   props: {
     heading: {

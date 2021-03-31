@@ -115,7 +115,7 @@
         </div>
 
         <!-- desktop links -->
-        <ul class="hidden md:flex space-x-8 text-lg" role="menubar">
+        <ul class="hidden md:flex space-x-8 text-lg">
           <li class="">
             <AppLargeNavigationLink
               :navigationLink="{
