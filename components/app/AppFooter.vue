@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-20 bg-gray-50 dark:bg-gray-800 relative">
+  <footer class="mt-20 bg-gray-200 dark:bg-gray-800 relative">
     <div>
       <ContactShorcut />
     </div>

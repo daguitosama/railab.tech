@@ -1,11 +1,11 @@
 <template>
   <li
     role="menuitem"
-    class="relative px-2 -left-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-lg transform transition-colors duration-150"
-    :class="{
-      'bg-gray-100 dark:bg-gray-900': isOnPath(footerLink.path),
-    }"
+    class="relative px-2 -left-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-lg transform transition-colors duration-300 ease-linear"
   >
+    <!-- :class="{
+      'bg-gray-100 dark:bg-gray-900': isOnPath(footerLink.path),
+    }" -->
     <nuxt-link
       :to="localePath(footerLink.localePath)"
       exact=""

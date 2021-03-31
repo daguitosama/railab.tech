@@ -86,7 +86,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 
 .focusable\-on\-visible{
-    @apply focus:outline-none focus-visible:ring rounded focus:opacity-100 focus-visible:ring-primary-light focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark;
+    @apply focus:outline-none focus-visible:ring rounded focus:opacity-100 focus-visible:ring-primary-light  dark:focus-visible:ring-primary-dark;
+}
+
+.focusable\-on\-visible\-amber{
+    @apply focus:outline-none focus-visible:ring-4 rounded-xl focus:opacity-100 focus-visible:ring-amber-500  dark:focus-visible:ring-amber-500 ;
 }
 
 .nuxt-link-exact-active {
