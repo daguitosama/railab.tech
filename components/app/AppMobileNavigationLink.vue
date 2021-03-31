@@ -1,6 +1,5 @@
 <template>
   <li
-    role="menuitem"
     class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
     :class="{
       'bg-gray-100 dark:bg-gray-800': isOnPath(navigationLink.path),

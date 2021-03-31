@@ -1,9 +1,9 @@
 <template>
-  <section class="md:flex pt-28 lg:pt-48 ">
+  <div class="md:flex pt-28 lg:pt-48 ">
     <div class="md:w-1/2 mt-10 focusable-on-visible" tabindex="0">
       <div>
         <h1
-          class="font-black text-5xl xl:text-6xl text-center md:text-left "
+          class=" font-black text-5xl xl:text-6xl text-center md:text-left "
         >
           {{ $t("services.intro.heading") }}
         </h1>
@@ -42,7 +42,7 @@
         />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -79,7 +79,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     backdrop-filter: blur(10px);
 }
 
-/* made clases */
+/* custom clases */
 
 .container{
     @apply max-w-screen-xl mx-auto px-6 md:px-8 xl:px-0;
@@ -88,3 +88,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 .focusable\-on\-visible{
     @apply focus:outline-none focus-visible:ring rounded focus:opacity-100 focus-visible:ring-primary-light focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark;
 }
+
+.nuxt-link-exact-active {
+    @apply text-opacity-100 text-onLight dark:text-opacity-100 dark:text-onDark font-semibold;
+  }

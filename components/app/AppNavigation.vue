@@ -117,35 +117,31 @@
         <!-- desktop links -->
         <ul class="hidden md:flex space-x-8 text-lg" role="menubar">
           <li class="">
-            <nuxt-link
-              :to="localePath('/')"
-              exact=""
-              :title="$t('navigation.services.tooltip')"
-              :class="{ 'nuxt-link-exact-active': isOnPath('index') }"
-              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1 transition-all duration-100 focus:outline-none focus:border-primary-light focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
-              >{{ $t("navigation.services.body") }}</nuxt-link
-            >
+            <AppLargeNavigationLink
+              :navigationLink="{
+                path: '/',
+                tooltipLocation: 'navigation.services.tooltip',
+                localePath: 'index',
+                bodyLocation: 'navigation.services.body',
+              }"
+            />
           </li>
           <li class="">
-            <nuxt-link
-              :to="localePath('contact')"
-              exact=""
-              :title="$t('navigation.contact.tooltip')"
-              :class="{ 'nuxt-link-exact-active': isOnPath('contact') }"
-              class="text-lg opacity-50 hover:opacity-100 rounded-lg px-1 transition-all duration-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
-              >{{ $t("navigation.contact.body") }}</nuxt-link
-            >
+            <AppLargeNavigationLink
+              :navigationLink="{
+                path: 'contact',
+                tooltipLocation: 'navigation.contact.tooltip',
+                localePath: 'contact',
+                bodyLocation: 'navigation.contact.body',
+              }"
+            />
           </li>
         </ul>
         <!-- desktop utilities -->
         <div class="hidden md:flex space-x-2">
-          <ColorModeCtrl
-            :label="$t('utilities.colorCtrl.label')"
-          />
+          <ColorModeCtrl :label="$t('utilities.colorCtrl.label')" />
           <div class="w-8 h-8">
-            <AppLangSwitcher
-              :label="$t('utilities.navigationMenu.label')"
-            />
+            <AppLangSwitcher :label="$t('utilities.navigationMenu.label')" />
           </div>
         </div>
       </nav>
@@ -155,6 +151,7 @@
 
 <script>
 import AppMobileNavigationLink from "@/components/app/AppMobileNavigationLink.vue";
+import AppLargeNavigationLink from "@/components/app/AppLargeNavigationLink.vue";
 import Logo from "@/components/icons/Logo.vue";
 import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
 import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
@@ -169,6 +166,7 @@ import { ref } from "@vue/composition-api";
 export default {
   components: {
     AppMobileNavigationLink,
+    AppLargeNavigationLink,
     Logo,
     ColorModeCtrl,
     AppLangSwitcher,
@@ -185,13 +183,13 @@ export default {
       mobileLinks: [
         {
           path: "index",
-          tooltipLocation: 'navigation.services.tooltip',
+          tooltipLocation: "navigation.services.tooltip",
           localePath: "/",
           bodyLocation: "navigation.services.body",
         },
         {
           path: "contact",
-          tooltipLocation: 'navigation.contact.tooltip',
+          tooltipLocation: "navigation.contact.tooltip",
           localePath: "contact",
           bodyLocation: "navigation.contact.body",
         },
@@ -245,8 +243,3 @@ export default {
 };
 </script>
 
-<style>
-.nuxt-link-exact-active {
-  @apply opacity-100 font-semibold;
-}
-</style>
