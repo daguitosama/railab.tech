@@ -100,6 +100,7 @@ module.exports = {
         address: 'General Lee e/ Vía Blanca y Pasaje Oeste',
         scheduleTimeStr: '10am a 5pm',
         leaveUsAMessage: 'Déjenos un mensaje',
+        leaveUsAMessageLine: 'Responderemos con brevedad.',
         form: {
             emailLabel: "Correo",
             emailPlaceholder: "Su correo",

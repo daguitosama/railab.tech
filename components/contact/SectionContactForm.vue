@@ -11,7 +11,7 @@
               {{ $t("contact.leaveUsAMessage") }}
             </h1>
           </div>
-          <p class="mt-4">Responderemos con brevedad.</p>
+          <p class="mt-8">{{$t('contact.leaveUsAMessageLine')}}</p>
         </div>
         <div class="w-full md:w-1/3">
           <ContactForm v-on:messageSended="onSended" />
