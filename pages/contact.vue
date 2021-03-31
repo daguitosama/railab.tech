@@ -3,8 +3,8 @@
     <div class="container">
       <SectionContactItems />
       <ContactMap />
-      <SectionContactForm class="py-32"  />
     </div>
+    <SectionContactForm class="py-32" />
   </div>
 </template>
 
@@ -19,10 +19,10 @@ export default {
     SectionContactForm,
     ContactMap,
   },
-  head(){
+  head() {
     return {
-      title: this.$t('contact.head.title'),
-      titleTemplate: '%s | Railab',
+      title: this.$t("contact.head.title"),
+      titleTemplate: "%s | Railab",
       meta: [
         // og
         {
@@ -36,8 +36,8 @@ export default {
           content: this.$t("contact.head.description"),
         },
       ],
-    }
-  }
+    };
+  },
 };
 </script>
 

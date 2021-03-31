@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="w-full">
     <transition name="fade">
       <form
         
         @submit.prevent="send"
-        class="bg-gray-100 dark:bg-gray-800 py-6 px-4 rounded-lg shadow-lg transition-colors duration-300 ease-linear"
+        class="text-onLight dark:text-onDark bg-gray-100 dark:bg-gray-800 py-6 px-4 rounded-lg shadow-lg transition-colors duration-300 ease-linear"
       >
         <div>
           <label for="name" class="block ml-2 text-sm">
