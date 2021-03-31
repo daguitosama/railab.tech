@@ -94,5 +94,5 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 
 .nuxt-link-exact-active {
-    @apply text-opacity-100 text-onLight dark:text-opacity-100 dark:text-onDark font-semibold;
-  }
+    @apply text-opacity-100  dark:text-opacity-100  font-semibold;
+}

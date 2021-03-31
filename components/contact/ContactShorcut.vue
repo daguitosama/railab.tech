@@ -12,7 +12,7 @@
         <nuxt-link
           :to="localePath($t('contact.shortcut.cta.pageName'))"
           :title="$t('contact.shortcut.cta.tooltip')"
-          class="inline-block mt-8 bg-white py-3 px-4 font-semibold text-blue-500 hover:bg-gray-200 shadow-xl hover:shadow-2xl transition-all duration-100 focusable-on-visible-amber"
+          class="inline-block mt-8 text-blue-500 dark:text-onLight bg-white py-3 px-4 font-semibold  hover:bg-gray-200 shadow-xl hover:shadow-2xl transition-all duration-100 focusable-on-visible-amber "
         >
           {{ $t("contact.shortcut.cta.body") }}
         </nuxt-link>
