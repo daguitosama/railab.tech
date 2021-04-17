@@ -4,7 +4,7 @@
     rel="noopener"
     :href="footerSocialItem.link"
     :title="footerSocialItem.tooltip"
-    class="rounded-lg opacity-80 hover:opacity-100 px-2 relative -left-2 flex focus:outline-none focus-visible:ring focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
+    class="rounded-lg opacity-80 hover:opacity-100  relative  flex justify-center sm:justify-start focus:outline-none focus-visible:ring focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark"
   >
     <slot></slot>
     <p class="ml-2">

@@ -5,12 +5,12 @@
     </div>
     <FooterCurve />
     <div class="container pt-144 md:pt-80 pb-20 ">
-      <div class="mt-6 sm:flex sm:justify-center">
-        <ul class="space-y-6 sm:space-y-0 sm:flex sm:space-x-10 md:space-x-16">
+      <div class="mt-6 text-center sm:text-left flex justify-center">
+        <ul class="space-y-10 sm:space-y-0 sm:flex sm:space-x-20 md:space-x-16">
           <li>
             <ul class="mt-4 space-y-3 text-sm">
               <li>
-                <p class="text-sm font-semibold opacity-80">
+                <p class="text-sm font-extrabold opacity-80">
                   {{ $t("navigation.linksText") }}
                 </p>
               </li>
@@ -21,9 +21,9 @@
           </li>
 
           <li>
-            <ul class="mt-4 space-y-3 text-sm">
+            <ul class="mt-4 space-y-3 text-sm ">
               <li>
-                <p class="text-sm font-semibold opacity-80">
+                <p class="text-sm font-extrabold opacity-80">
                   {{ $t("footer.comunity.title") }}
                 </p>
               </li>

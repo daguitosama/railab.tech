@@ -1,7 +1,7 @@
 <template>
   <li
     
-    class="relative opacity-80 px-2 -left-2 hover:opacity-100  transform transition-colors duration-300 ease-linear"
+    class="relative opacity-80  hover:opacity-100  transform transition-colors duration-300 ease-linear"
   >
     
     <nuxt-link
