@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-84 flex items-center justify-center">
+  <section class="min-h-84 py-12 flex items-center justify-center">
     <div class="w-full">
       <AppHeading
         class="max-w-md"
