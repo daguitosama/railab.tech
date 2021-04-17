@@ -4,7 +4,7 @@
       <ContactShorcut />
     </div>
     <FooterCurve />
-    <div class="container pt-144 md:pt-80 pb-20 ">
+    <div class="container pt-144 md:pt-80 pb-20">
       <div class="mt-6 text-center sm:text-left flex justify-center">
         <ul class="space-y-10 sm:space-y-0 sm:flex sm:space-x-20 md:space-x-16">
           <li>
@@ -21,7 +21,7 @@
           </li>
 
           <li>
-            <ul class="mt-4 space-y-3 text-sm ">
+            <ul class="mt-4 space-y-3 text-sm">
               <li>
                 <p class="text-sm font-extrabold opacity-80">
                   {{ $t("footer.comunity.title") }}
@@ -76,7 +76,6 @@ import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import FooterCurve from "@/components/illustations/FooterCurve.vue";
-import ContactShorcut from "@/components/contact/ContactShorcut.vue";
 
 export default {
   components: {
@@ -87,8 +86,7 @@ export default {
     Facebook,
     Twitter,
     FooterCurve,
-
-    ContactShorcut,
+    ContactShorcut: () => import("@/components/contact/ContactShorcut.vue"),
   },
   data() {
     return {
