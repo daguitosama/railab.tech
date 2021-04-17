@@ -1,12 +1,9 @@
 <template>
   <footer class="mt-20 bg-gray-200 dark:bg-gray-800 relative">
+    
     <FooterCurve />
-    <div class="container pt-144 md:pt-80 pb-20">
-      <header class=" ">
-        <p class="text-sm opacity-80">© 2021 Railab</p>
-      </header>
-
-      <div class="mt-6">
+    <div class="container  pt-40 pb-20 ">
+      <div class="mt-6 sm:flex sm:justify-center">
         <ul class="space-y-6 sm:space-y-0 sm:flex sm:space-x-10 md:space-x-16">
           <li>
             <ul class="mt-4 space-y-3 text-sm">
@@ -62,6 +59,9 @@
           </li>
         </ul>
       </div>
+      <div class="mt-12 text-center">
+        <p class="text-sm opacity-80">© 2021 Railab</p>
+      </div>
     </div>
   </footer>
 </template>
@@ -74,6 +74,7 @@ import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import FooterCurve from "@/components/illustations/FooterCurve.vue";
+import ContactShorcut from "@/components/contact/ContactShorcut.vue";
 
 export default {
   components: {
@@ -84,6 +85,8 @@ export default {
     Facebook,
     Twitter,
     FooterCurve,
+
+    ContactShorcut,
   },
   data() {
     return {
