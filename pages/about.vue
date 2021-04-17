@@ -8,8 +8,7 @@
         <p class="">{{ $t("about.description.p3") }}</p>
       </div>
     </div>
-    <ContactShorcut />
-  </div>
+    </div>
 </template>
 
 <script>
