@@ -1,17 +1,15 @@
 <template>
   <li
-    role="menuitem"
-    class="relative px-2 -left-2 hover:bg-gray-100 dark:hover:bg-gray-900 rounded-lg transform transition-colors duration-300 ease-linear"
+    
+    class="relative opacity-80 px-2 -left-2 hover:opacity-100  transform transition-colors duration-300 ease-linear"
   >
-    <!-- :class="{
-      'bg-gray-100 dark:bg-gray-900': isOnPath(footerLink.path),
-    }" -->
+    
     <nuxt-link
       :to="localePath(footerLink.localePath)"
       exact=""
       :title="$t(footerLink.tooltipLocation)"
       :class="{
-        'font-semibold text-primary-light dark:text-onDark': isOnPath(
+        'opacity-100': isOnPath(
           footerLink.path
         ),
       }"
