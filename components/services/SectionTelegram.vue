@@ -37,7 +37,7 @@
         </div>
         <!-- scene -->
         <div class="hidden md:block h-full w-5/12 my-auto mx-auto">
-          <ScenePeps />
+          <!-- <ScenePeps /> -->
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@ export default {
   components: {
     Plane,
     AppHeading,
-    ScenePeps: () => import("@/components/illustations/ScenePeps.vue"),
+    // ScenePeps: () => import("@/components/illustations/ScenePeps.vue"),
   },
   props: {
     sectionHeading: {

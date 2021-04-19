@@ -4,7 +4,9 @@
     ref="main_navigation"
     class="fixed top-0 left-0 w-full z-30 bg-surface-light dark:bg-surface-dark transition-all duration-300 ease-linear especial-shadow"
   >
-    <AppNavigationMobile :links="Links" />
+    <LazyHydrate when-idle>
+      <AppNavigationMobile :links="Links" />
+    </LazyHydrate>
     <!-- desktop -->
     <AppNavigationLarge :links="Links" />
   </header>
@@ -15,8 +17,10 @@ import { navigationLinks } from "@/data/data.js";
 import AppNavigationLarge from "@/components/app/AppNavigationLarge.vue";
 import { useEventListener, useThrottleFn } from "@vueuse/core";
 import { onMounted, ref } from "@vue/composition-api";
+import LazyHydrate from 'vue-lazy-hydration';
 export default {
   components: {
+    LazyHydrate,
     AppNavigationLarge,
     AppNavigationMobile : ()=> import('@/components/app/AppNavigationMobile.vue'),
   },

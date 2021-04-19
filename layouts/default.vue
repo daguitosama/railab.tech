@@ -7,7 +7,9 @@
     <main id="main-content" tabindex="0" class="focusable-on-visible">
       <Nuxt />
     </main>
-    <AppFooter />
+    <LazyHydrate when-idle>
+      <AppFooter />
+    </LazyHydrate>
   </div>
 </template>
 
@@ -15,11 +17,13 @@
 <script>
 import AppNavigation from "@/components/app/AppNavigation.vue";
 import SkipToMainLinkn from "@/components/app/SkipToMainLink.vue";
+import LazyHydrate from "vue-lazy-hydration";
 export default {
   components: {
     AppNavigation,
     AppFooter: () => import("@/components/app/AppFooter.vue"),
     SkipToMainLinkn,
+    LazyHydrate,
   },
   head() {
     return Object.assign({}, this.$nuxtI18nSeo());
