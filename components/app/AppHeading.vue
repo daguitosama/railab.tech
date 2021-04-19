@@ -21,7 +21,7 @@ export default {
   props: {
     sectionHeading: {
       type: String,
-      default: "Service Section Title",
+      default: "T",
     },
     sectionHeadingId: {
       type: String,
