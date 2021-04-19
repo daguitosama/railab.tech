@@ -14,32 +14,12 @@
 import { navigationLinks } from "@/data/data.js";
 import AppNavigationMobile from '@/components/app/AppNavigationMobile.vue'
 import AppNavigationLarge from "@/components/app/AppNavigationLarge.vue";
-import AppMobileNavigationLink from "@/components/app/AppMobileNavigationLink.vue";
-import Logo from "@/components/icons/Logo.vue";
-import ColorModeCtrl from "@/components/app/ColorModeCtrl.vue";
-import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
-import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
-import ContactItemButton from "@/components/contact/ContactItemButton.vue";
-import Telegram from "@/components/icons/Telegram.vue";
-import WhatsApp from "@/components/icons/WhatsApp.vue";
-import Facebook from "@/components/icons/Facebook.vue";
-import Twitter from "@/components/icons/Twitter.vue";
-import { useEventListener } from "@vueuse/core";
-import { ref } from "@vue/composition-api";
+import { useEventListener, useThrottleFn } from "@vueuse/core";
+import { onMounted, ref } from "@vue/composition-api";
 export default {
   components: {
     AppNavigationLarge,
-    AppMobileNavigationLink,
     AppNavigationMobile,
-    Logo,
-    ColorModeCtrl,
-    AppLangSwitcher,
-    AppNavigationBurgerButton,
-    ContactItemButton,
-    Telegram,
-    WhatsApp,
-    Facebook,
-    Twitter,
   },
 
   data() {
@@ -55,40 +35,55 @@ export default {
   },
 
   setup() {
-    let navOpen = ref(false);
-    let lang_menu = ref(null);
+    let prevScrollPos = ref(0);
+    let main_navigation = ref(null);
 
-    useEventListener(lang_menu, "click", onMenuClick);
-
-    function onMenuClick(evt) {
-      // if is an anchor close the menu
-      if (evt?.target?.tagName === "A") {
-        toogleNav();
+    function onScroll() {
+      // if ...
+      if (window.pageYOffset < prevScrollPos.value) {
+        handleNav("open");
+      } else {
+        if (window.pageYOffset > 100) {
+          handleNav("close");
+        }
       }
+
+      prevScrollPos.value = window.pageYOffset;
     }
 
-    function toogleNav() {
-      navOpen.value = !navOpen.value;
+    let onScrollThrottled = useThrottleFn(onScroll, 50);
+
+    // ---------------
+    // EventBindings
+    // ---------------
+    useEventListener("scroll", onScrollThrottled);
+
+    // ---------------
+    // Life Cycle
+    // ---------------
+    onMounted(() => {
       if (process.client) {
-        if (navOpen.value) {
-          document.body.classList.add("overflow-hidden", "absolute", "inset-0");
-        } else {
-          document.body.classList.remove(
-            "overflow-hidden",
-            "absolute",
-            "inset-0"
+        prevScrollPos.value = window.pageYOffset;
+      }
+    });
+
+    function handleNav(state /* 'open' || 'close' */) {
+      if (process.client) {
+        if (state == "open") {
+          main_navigation.value.classList.remove(
+            "transform",
+            "-translate-y-32"
           );
+        }
+        if (state == "close") {
+          main_navigation.value.classList.add("transform", "-translate-y-32");
         }
       }
     }
 
     return {
       // refs
-      lang_menu,
-      // state
-      navOpen,
-      // function
-      toogleNav,
+      main_navigation,
     };
   },
 };
