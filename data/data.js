@@ -11,5 +11,10 @@ export const navigationLinks = [
         localePath: "contact",
         bodyLocation: "navigation.contact.body",
     },
-    
+    {
+        path: "about",
+        tooltipLocation: "footer.links.about.tooltip",
+        localePath: "about",
+        bodyLocation: "footer.links.about.body",
+    },
 ]

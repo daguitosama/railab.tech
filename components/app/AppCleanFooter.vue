@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-20 bg-gray-200 dark:bg-gray-800 relative">
     <FooterCurve />
-    <div class="container  pt-40 pb-20 ">
+    <div class="container pt-40 pb-20">
       <div class="mt-6 text-center sm:text-left flex justify-center">
         <ul class="space-y-10 sm:space-y-0 sm:flex sm:space-x-20 md:space-x-16">
           <li>
@@ -18,7 +18,7 @@
           </li>
 
           <li>
-            <ul class="mt-4 space-y-3 text-sm ">
+            <ul class="mt-4 space-y-3 text-sm">
               <li>
                 <p class="text-sm font-extrabold opacity-80">
                   {{ $t("footer.comunity.title") }}
@@ -72,6 +72,7 @@ import Telegram from "@/components/icons/Telegram.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import FooterCurve from "@/components/illustations/FooterCurve.vue";
+import { navigationLinks } from "@/data/data.js";
 
 export default {
   components: {
@@ -81,30 +82,10 @@ export default {
     Facebook,
     Twitter,
     FooterCurve,
-
   },
   data() {
     return {
-      mobileLinks: [
-        {
-          path: "index",
-          tooltipLocation: "navigation.services.tooltip",
-          localePath: "/",
-          bodyLocation: "navigation.services.body",
-        },
-        {
-          path: "contact",
-          tooltipLocation: "navigation.contact.tooltip",
-          localePath: "contact",
-          bodyLocation: "navigation.contact.body",
-        },
-        {
-          path: "about",
-          tooltipLocation: "footer.links.about.tooltip",
-          localePath: "about",
-          bodyLocation: "footer.links.about.body",
-        },
-      ],
+      mobileLinks: navigationLinks,
     };
   },
 };

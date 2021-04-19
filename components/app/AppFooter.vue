@@ -75,7 +75,7 @@ import Telegram from "@/components/icons/Telegram.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import FooterCurve from "@/components/illustations/FooterCurve.vue";
-
+import { navigationLinks } from "@/data/data.js";
 export default {
   components: {
     AppFooterLink,
@@ -88,26 +88,7 @@ export default {
   },
   data() {
     return {
-      mobileLinks: [
-        {
-          path: "index",
-          tooltipLocation: "navigation.services.tooltip",
-          localePath: "/",
-          bodyLocation: "navigation.services.body",
-        },
-        {
-          path: "contact",
-          tooltipLocation: "navigation.contact.tooltip",
-          localePath: "contact",
-          bodyLocation: "navigation.contact.body",
-        },
-        {
-          path: "about",
-          tooltipLocation: "footer.links.about.tooltip",
-          localePath: "about",
-          bodyLocation: "footer.links.about.body",
-        },
-      ],
+      mobileLinks: navigationLinks,
     };
   },
 };
