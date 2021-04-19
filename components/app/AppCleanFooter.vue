@@ -69,23 +69,19 @@
 import AppFooterLink from "@/components/app/AppFooterLink.vue";
 import AppFooterSocialItem from "@/components/app/AppFooterSocialItem.vue";
 import Telegram from "@/components/icons/Telegram.vue";
-import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import FooterCurve from "@/components/illustations/FooterCurve.vue";
-import ContactShorcut from "@/components/contact/ContactShorcut.vue";
 
 export default {
   components: {
     AppFooterLink,
     AppFooterSocialItem,
     Telegram,
-    WhatsApp,
     Facebook,
     Twitter,
     FooterCurve,
 
-    ContactShorcut,
   },
   data() {
     return {

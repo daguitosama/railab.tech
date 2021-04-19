@@ -108,7 +108,6 @@ import AppLangSwitcher from "@/components/app/AppLangSwitcher.vue";
 import AppNavigationBurgerButton from "@/components/app/AppNavigationBurgerButton.vue";
 import ContactItemButton from "@/components/contact/ContactItemButton.vue";
 import Telegram from "@/components/icons/Telegram.vue";
-import WhatsApp from "@/components/icons/WhatsApp.vue";
 import Facebook from "@/components/icons/Facebook.vue";
 import Twitter from "@/components/icons/Twitter.vue";
 import { useEventListener } from "@vueuse/core";
@@ -123,7 +122,6 @@ export default {
     AppNavigationBurgerButton,
     ContactItemButton,
     Telegram,
-    WhatsApp,
     Facebook,
     Twitter,
   },
