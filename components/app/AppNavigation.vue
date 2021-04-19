@@ -12,14 +12,13 @@
 
 <script>
 import { navigationLinks } from "@/data/data.js";
-import AppNavigationMobile from '@/components/app/AppNavigationMobile.vue'
 import AppNavigationLarge from "@/components/app/AppNavigationLarge.vue";
 import { useEventListener, useThrottleFn } from "@vueuse/core";
 import { onMounted, ref } from "@vue/composition-api";
 export default {
   components: {
     AppNavigationLarge,
-    AppNavigationMobile,
+    AppNavigationMobile : ()=> import('@/components/app/AppNavigationMobile.vue'),
   },
 
   data() {

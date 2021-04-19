@@ -14,7 +14,7 @@ import ContactMap from "@/components/contact/ContactMap.vue";
 import SectionContactForm from "@/components/contact/SectionContactForm.vue";
 
 export default {
-  layout:'cleanFooter',
+  layout:'use-global-notifications',
   components: {
     SectionContactItems,
     SectionContactForm,
