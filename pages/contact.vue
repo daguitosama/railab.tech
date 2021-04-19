@@ -4,7 +4,9 @@
       <SectionContactItems />
       <ContactMap />
     </div>
-    <SectionContactForm class="py-32" />
+    <LazyHydrate when-idle>
+      <SectionContactForm class="py-32" />
+    </LazyHydrate>
   </div>
 </template>
 
@@ -12,10 +14,11 @@
 import SectionContactItems from "@/components/contact/SectionContactItems.vue";
 import ContactMap from "@/components/contact/ContactMap.vue";
 import SectionContactForm from "@/components/contact/SectionContactForm.vue";
-
+import LazyHydrate from "vue-lazy-hydration";
 export default {
-  layout:'use-global-notifications',
+  layout: "use-global-notifications",
   components: {
+    LazyHydrate,
     SectionContactItems,
     SectionContactForm,
     ContactMap,

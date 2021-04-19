@@ -57,23 +57,6 @@ export default {
     Twitter,
     ContactItem,
   },
-  // props: {
-  //   contactHeading: {
-  //     type: String,
-  //     default: "Contáctenos",
-  //   },
-  //   contactPhone: {
-  //     type: Object,
-  //     default: () => ({
-  //       body: "(+53) 5 413 21 20",
-  //       tootlip: "Nuestro número de teléfono",
-  //       link: "tel:5354132120",
-  //     }),
-  //   },
-  // },
   
 };
 </script>
-
-<style>
-</style>
