@@ -303,6 +303,10 @@ module.exports = {
             p2:`Eso si, un desorden controlado de todo taller con carga diaria de trabajo. No será recibido por un recepcionista. Toque nuestra puerta y será amablemente recibido por el mismo técnico que se pondrá manos a la obra para la defectación y solución de su problema.`,
             p3:`Contamos con 6 años de experiencia ayudando a la comunidad Mac en Cuba.`
         }
+    },
+    404: {
+        heading: "Looks like you are lost",
+        linkText: "Go back home"
     }
 
 }

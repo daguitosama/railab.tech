@@ -163,8 +163,8 @@ module.exports = {
                 "geo": {
                     "@type": "GeoCoordinates",
                     "latitude": "23.103572252016864",
-                    "longitude": "-82.37696911418756" , 
-                  },
+                    "longitude": "-82.37696911418756",
+                },
                 "email": "railab.pc@gmail.com",
                 "legalName": "Railab",
                 "telephone": "(+53) 5 413 21 20",
@@ -303,6 +303,10 @@ module.exports = {
             p2: `An under control disorder of the day workload of our workshop. We have no receptionist. Knoke our door and will be kindly welcomed by the same technician that will start the troubleshooting of your device and will produce the solution of your problem.`,
             p3: `We have 6 years and counting of experience helping the Mac community in Cuba.`
         }
+    },
+    404: {
+        heading: "Looks like you are lost",
+        linkText: "Go back home"
     }
 
 }
