@@ -144,9 +144,30 @@ module.exports = {
 
     
     services: {
-        head:{
-            title:'Servicio de reparacion de Macbooks, iMacs y Macs',
-            description:"Servicio de Reparación de Macbooks, iMacs y Macs. Habana Cuba."
+        meta: {
+            title: 'Servicio de reparacion de Macbooks, iMacs y Macs',
+            description: "Servicio de reparación de Macbooks, iMacs y Macs. Habana Cuba.",
+            og_site_name: "Railab",
+            og_image_alt: 'Railab nuestro logo',
+            linked_data: {
+                "@context": "https://schema.org",
+                "@type": "ChildCare",
+                "name": "Railab",
+                "image": "https://railab.tech/img/railab-social-image-1500x500.jpg",
+                "priceRange": "$$",
+                "currenciesAccepted": 'CUP',
+                "openingHours": "Mo-Fr 10:00-17:00",
+                "paymentAccepted": "Cash",
+                "address": "General Lee e/ Vía Blanca y Pasaje Oeste",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "23.103572252016864",
+                    "longitude": "-82.37696911418756" , 
+                  },
+                "email": "railab.pc@gmail.com",
+                "legalName": "Railab",
+                "telephone": "(+53) 5 413 21 20",
+            }
         },
         intro: {
             heading: 'Repara tu Mac en Cuba',

@@ -26,7 +26,7 @@ module.exports = {
             },
         },
         comunity: {
-            title:'Community',
+            title: 'Community',
             telegramLink: {
                 body: "Telegram",
                 tootlip: "Our Telegram group",
@@ -43,7 +43,7 @@ module.exports = {
                 link: "https://twitter.com/RailabMac",
             },
         },
-        
+
 
     },
     utilities: {
@@ -61,9 +61,9 @@ module.exports = {
     },
 
     contact: {
-        head:{
-            title:'Contact us',
-            description:'Our contact information'
+        head: {
+            title: 'Contact us',
+            description: 'Our contact information'
 
         },
         contactHeading: "Contact us",
@@ -72,7 +72,7 @@ module.exports = {
             tootlip: "Our phone number",
             link: "tel:5354132120",
         },
-        contactPersonalTelegram:{
+        contactPersonalTelegram: {
             body: "Telegram",
             tootlip: "Our Telegram account",
             link: "https://t.me/RaikMac",
@@ -98,7 +98,7 @@ module.exports = {
             link: "https://twitter.com/RailabMac",
         },
         whereToFindUs: 'Where to find us',
-        mapTitle:'Our localization on the map',
+        mapTitle: 'Our localization on the map',
         address: 'General Lee e/ Vía Blanca y Pasaje Oeste',
         scheduleTimeStr: 'From 10am to 5pm',
         leaveUsAMessage: 'Drop us a line',
@@ -112,12 +112,12 @@ module.exports = {
                 normalLabel: 'Send',
                 sendingLabel: 'Sending'
             },
-            sendError:'Something just happen when we where sending your message. Please try again.',
-            sendedMessage:'Tanks for reach us. We will replay you back shortly 👍️',
+            sendError: 'Something just happen when we where sending your message. Please try again.',
+            sendedMessage: 'Tanks for reach us. We will replay you back shortly 👍️',
         },
         shortcut: {
             heading: 'Contact us',
-            description:'Lets fix that Mac today.',
+            description: 'Lets fix that Mac today.',
             cta: {
                 body: 'Go to the contact page →',
                 tooltip: 'Our contact page',
@@ -145,9 +145,30 @@ module.exports = {
     },
 
     services: {
-        head:{
-            title:'Macbook, iMac and Mac repair service',
-            description:"Macbooks, iMacs and Macs repair service. Habana Cuba."
+        meta: {
+            title: 'Macbook, iMac and Mac repair service',
+            description: "Macbooks, iMacs and Macs repair service. Habana Cuba.",
+            og_site_name: "Railab",
+            og_image_alt: 'Railab our logo',
+            linked_data: {
+                "@context": "https://schema.org",
+                "@type": "ChildCare",
+                "name": "Railab",
+                "image": "https://railab.tech/img/railab-social-image-1500x500.jpg",
+                "priceRange": "$$",
+                "currenciesAccepted": 'CUP',
+                "openingHours": "Mo-Fr 10:00-17:00",
+                "paymentAccepted": "Cash",
+                "address": "General Lee e/ Vía Blanca y Pasaje Oeste",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "23.103572252016864",
+                    "longitude": "-82.37696911418756" , 
+                  },
+                "email": "railab.pc@gmail.com",
+                "legalName": "Railab",
+                "telephone": "(+53) 5 413 21 20",
+            }
         },
         intro: {
             heading: 'Repair your Mac in Cuba',
@@ -270,17 +291,17 @@ module.exports = {
             ],
         },
     },
-    about:{
-        head:{
-            title:'About us',
-            description:'More the six years helping the  Mac community in Cuba.'
+    about: {
+        head: {
+            title: 'About us',
+            description: 'More the six years helping the  Mac community in Cuba.'
 
         },
-        heading:'About us',
-        description:{
-            p1:`Our worshop isn't designed to look as a boutique, to impress with the beauty of our installations. When you arrive, you will see heat stations, microscope, power supply units for test, disassembled Macbooks in repair process and much more...`,
-            p2:`An under control disorder of the day workload of our workshop. We have no receptionist. Knoke our door and will be kindly welcomed by the same technician that will start the troubleshooting of your device and will produce the solution of your problem.`,
-            p3:`We have 6 years and counting of experience helping the Mac community in Cuba.`
+        heading: 'About us',
+        description: {
+            p1: `Our worshop isn't designed to look as a boutique, to impress with the beauty of our installations. When you arrive, you will see heat stations, microscope, power supply units for test, disassembled Macbooks in repair process and much more...`,
+            p2: `An under control disorder of the day workload of our workshop. We have no receptionist. Knoke our door and will be kindly welcomed by the same technician that will start the troubleshooting of your device and will produce the solution of your problem.`,
+            p3: `We have 6 years and counting of experience helping the Mac community in Cuba.`
         }
     }
 
