@@ -127,7 +127,7 @@ export default {
         {
           type: "application/ld+json",
           json: {
-            ...this.$t('home.meta.linked_data'),
+            ...this.$t('services.meta.linked_data'),
             url:`https://railab.tech/${this.langPath}`,
             description:this.$t("services.meta.description")
           },
