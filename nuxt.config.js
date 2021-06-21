@@ -150,9 +150,5 @@ export default {
     }
   },
 
-  tailwindcss: {
-    jit: true
-  }
-
 
 }

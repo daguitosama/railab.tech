@@ -14,20 +14,19 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.8.3",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/color-mode": "^2.0.5",
-    "@nuxtjs/tailwindcss": "^4.0.0",
-    "@tailwindcss/jit": "^0.1.1",
+    "@nuxtjs/tailwindcss": "^4.1.3",
     "@vue/composition-api": "^1.0.0-rc.1",
     "@vueuse/core": "^4.8.2",
     "focus-visible": "^5.2.0",
     "nuxt-i18n": "^6.21.0",
     "postcss": "^8.2.8",
     "postcss-focus-visible": "^5.0.0",
-    "storyblok-nuxt": "^1.3.0",
+    "storyblok-nuxt": "^2.0.1",
     "vue-lazy-hydration": "^2.0.0-beta.4"
   }
 }
