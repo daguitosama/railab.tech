@@ -2,12 +2,12 @@
   <div class="lg:hidden">
     <!-- mobile -->
     <nav class="py-6 flex items-center justify-between container">
-      <div class="w-32">
+      <div class="">
         <nuxt-link
           :to="localePath('/')"
-          class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
+          class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
         >
-          <Logo class="w-full" :title="$t('navigation.logo.title')" />
+          <Logo class="h-full" :title="$t('navigation.logo.title')" />
         </nuxt-link>
       </div>
 
@@ -31,9 +31,9 @@
             <div class="w-32">
               <nuxt-link
                 :to="localePath('/')"
-                class="flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
+                class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
               >
-                <Logo class="w-full" :title="$t('navigation.logo.title')" />
+                <Logo class="h-full" :title="$t('navigation.logo.title')" />
               </nuxt-link>
             </div>
             <!-- links -->
