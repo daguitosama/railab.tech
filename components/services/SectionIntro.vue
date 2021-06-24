@@ -13,7 +13,26 @@
       <div class="mt-10">
         <div class="flex">
           <nuxt-link
-            class="block mx-auto md:mx-0 text-lg py-3 px-10 rounded-2xl shadow transition-colors duration-150 text-white bg-primary-light hover:bg-primary-light-hover dark:bg-primary-dark dark:hover:bg-primary-dark-hover focus:outline-none focus-visible:ring focus-visible:ring-primary-light-hover dark:focus-visible:ring-primary-dark-hover"
+            class="
+              block
+              mx-auto
+              md:mx-0
+              text-lg
+              py-3
+              px-10
+              rounded-2xl
+              shadow
+              transition-colors
+              duration-150
+              text-white
+              bg-primary-light
+              hover:bg-primary-light-hover
+              dark:bg-primary-dark
+              dark:hover:bg-primary-dark-hover
+              focus:outline-none
+              focus-visible:ring focus-visible:ring-primary-light-hover
+              dark:focus-visible:ring-primary-dark-hover
+            "
             :to="localePath($t('services.intro.cta.pageName'))"
             :title="$t('services.intro.cta.tooltip')"
           >
@@ -22,7 +41,16 @@
         </div>
         <div class="mt-5 flex md:block">
           <a
-            class="text-lg mx-auto opacity-75 focus:opacity-100 hover:opacity-100 focusable-on-visible transition-opacity duration-150"
+            class="
+              text-lg
+              mx-auto
+              opacity-75
+              focus:opacity-100
+              hover:opacity-100
+              focusable-on-visible
+              transition-opacity
+              duration-150
+            "
             :href="'#' + $t('services.intro.secondaryLink.innerLinkId')"
             :title="$t('services.intro.secondaryLink.tooltip')"
           >
@@ -31,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="hidden md:flex w-2/4 " >
+    <div class="hidden md:flex w-2/4">
       <div class="pb-2/3 relative w-full" ref="target">
         <img
           v-if="isImageNeeded"
