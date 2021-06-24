@@ -13,16 +13,29 @@
       gap-6
     "
   >
-    <button class="bg-gray-200 h-32" style="height: 40px; width: 60px">
-      btn
-    </button>
-    <div class="bg-gray-200 w-[40px] h-[40px] ">div</div>
+    <Burger :isOpen="isOpen" @toogle="toogleOpen"/>
   </div>
 </template>
 
 <script>
+import { ref } from "vue-demi";
+import Burger from "~/components/app/AppNavigationBurgerButton.vue";
 export default {
   layout: "empty",
+  components: { Burger },
+
+  setup() {
+    var isOpen = ref(false);
+
+    function toogleOpen() {
+      isOpen.value = !isOpen.value;
+    }
+
+    return {
+      isOpen,
+      toogleOpen,
+    };
+  },
 };
 </script>
 

@@ -78,26 +78,44 @@
               {{ $t("navigation.socialText") }}
             </li>
             <li class="mt-4">
-              <ul class="flex items-center space-x-4">
+              <ul class="space-y-2">
                 <li>
                   <ContactItemButton
                     :contactItem="$t('contact.contactTelegram')"
                   >
-                    <Telegram :title="$t('icons.Telegram.title')" />
+                    <div class="flex items-center space-x-3">
+                      <Telegram
+                        :title="$t('icons.Telegram.title')"
+                        class="w-5 h-5"
+                      />
+                      <span>Telegram</span>
+                    </div>
                   </ContactItemButton>
                 </li>
                 <li>
                   <ContactItemButton
                     :contactItem="$t('contact.contactFacebook')"
                   >
-                    <Facebook :title="$t('icons.Facebook.title')" />
+                    <div class="flex items-center space-x-3">
+                      <Facebook
+                        :title="$t('icons.Facebook.title')"
+                        class="w-5 h-5"
+                      />
+                      <span>Facebook</span>
+                    </div>
                   </ContactItemButton>
                 </li>
                 <li>
                   <ContactItemButton
                     :contactItem="$t('contact.contactTwitter')"
                   >
-                    <Twitter :title="$t('icons.Twitter.title')" />
+                    <div class="flex items-center space-x-3">
+                      <Twitter
+                        :title="$t('icons.Twitter.title')"
+                        class="w-5 h-5"
+                      />
+                      <span>Twitter</span>
+                    </div>
                   </ContactItemButton>
                 </li>
               </ul>
@@ -113,7 +131,7 @@
                     aria-hidden="true"
                     :label="$t('utilities.colorCtrl.label')"
                     class="w-full h-full flex items-center justify-center"
-                    svgClasses="w-6 h-6"
+                    svgClasses="w-5 h-5"
                   />
                 </li>
                 <li class="w-10 h-10">

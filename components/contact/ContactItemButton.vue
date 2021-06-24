@@ -1,10 +1,23 @@
 <template>
   <a
-    rel=”noopener”
+    rel="”noopener”"
     target="_blank"
     :href="contactItem.link"
     :title="contactItem.tooltip"
-    class="shadow bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900 rounded-2xl w-12 h-12 flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-primary-light dark:focus-visible:ring-primary-dark "
+    class="
+      dark:hover:bg-gray-800
+      rounded-xl
+      w-full
+      block
+      focus:outline-none
+      focus-visible:ring focus-visible:ring-primary-light
+      dark:focus-visible:ring-primary-dark
+      pl-2
+      py-2
+      transform
+      transition-colors
+      duration-150
+    "
   >
     <slot></slot>
   </a>

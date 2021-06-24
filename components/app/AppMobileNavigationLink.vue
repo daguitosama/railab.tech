@@ -1,6 +1,6 @@
 <template>
   <li
-    class="py-2 pl-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transform transition-colors duration-150"
+    class="rounded-lg"
     :class="{
       'bg-gray-100 dark:bg-gray-800': isOnPath(navigationLink.path),
     }"
@@ -14,7 +14,21 @@
           navigationLink.path
         ),
       }"
-      class="h-full block"
+      class="
+        h-full
+        block
+        focus:outline-none
+        focus-visible:ring focus-visible:ring-primary-light
+        dark:focus-visible:ring-primary-dark
+        py-2
+        pl-2
+        hover:bg-gray-100
+        dark:hover:bg-gray-800
+        rounded-lg
+        transform
+        transition-colors
+        duration-150  
+      "
       >{{ $t(navigationLink.bodyLocation) }}</nuxt-link
     >
   </li>
@@ -29,7 +43,7 @@ export default {
         path: "",
         tooltipLocation: "",
         localePath: "",
-        bodyLocation:''
+        bodyLocation: "",
       }),
     },
   },
