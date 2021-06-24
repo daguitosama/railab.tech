@@ -1,11 +1,19 @@
 <template>
   <div class="lg:hidden">
     <!-- mobile -->
-    <nav class="py-6 flex items-center justify-between container">
+    <nav class="py-4 flex items-center justify-between container">
       <div class="">
         <nuxt-link
           :to="localePath('/')"
-          class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
+          class="
+            h-6
+            flex
+            items-baseline
+            focus:outline-none
+            focus:ring-4 focus:ring-primary-light
+            dark:focus:ring-primary-dark
+            rounded-lg
+          "
         >
           <Logo class="h-full" :title="$t('navigation.logo.title')" />
         </nuxt-link>
@@ -25,13 +33,34 @@
           <ul
             id="mobile-nav-menu"
             role="menubar"
-            class="px-6 pt-7 pb-20 z-10 w-full h-full overflow-y-auto bg-surface-light dark:bg-surface-dark transition-colors duration-300 ease-linear"
+            class="
+              px-6
+              pt-5
+              pb-12
+              z-10
+              w-full
+              h-full
+              overflow-y-auto
+              bg-surface-light
+              dark:bg-surface-dark
+              transition-colors
+              duration-300
+              ease-linear
+            "
           >
             <!-- logo -->
             <div class="w-32">
               <nuxt-link
                 :to="localePath('/')"
-                class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
+                class="
+                  h-6
+                  flex
+                  items-baseline
+                  focus:outline-none
+                  focus:ring-4 focus:ring-primary-light
+                  dark:focus:ring-primary-dark
+                  rounded-lg
+                "
               >
                 <Logo class="h-full" :title="$t('navigation.logo.title')" />
               </nuxt-link>
