@@ -1,6 +1,6 @@
 export default {
 
-  target: 'static',
+  target: 'server',
   server: {
     host: '0.0.0.0',
     port: 3000
