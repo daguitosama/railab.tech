@@ -18,7 +18,7 @@
         relative
         hover:bg-gray-100
         dark:hover:bg-gray-800
-      " 
+      "
     >
       <svg
         class="w-6 h-6"
@@ -68,11 +68,6 @@ export default {
   methods: {
     handleClick() {
       this.$emit("toogle");
-    },
-  },
-  computed: {
-    fillColor() {
-      return this.$colorMode.value === "light" ? "#4A5568" : "";
     },
   },
 };
