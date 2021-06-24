@@ -5,7 +5,20 @@
       :aria-expanded="!isOpen"
       :aria-label="label"
       @click="handleClick"
-      class="focus:outline-none focus:shadow-outline transition-all duration-150 rounded-lg border px-1 py-1 relative hover:bg-gray-100 dark:hover:bg-gray-800"
+      class="
+        focus:outline-none
+        focus:ring-2
+        focus-visible:ring-primary-light-hover
+        dark:focus-visible:ring-primary-dark-hover
+        transition-all
+        duration-150
+        rounded-lg
+        px-1
+        py-1
+        relative
+        hover:bg-gray-100
+        dark:hover:bg-gray-800
+      " 
     >
       <svg
         class="w-6 h-6"
