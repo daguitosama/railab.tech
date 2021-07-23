@@ -49,7 +49,15 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: '/scripts/focus-visible.min.js', async: true, defer: true }
+      { src: '/scripts/focus-visible.min.js', async: true, defer: true },
+      {
+        src: "https://analitics.bicentenarioquebicentenario.com/js/plausible.js",
+        async:true,
+        defer:true,
+        'data-domain':"railab.tech"
+      }
+
+
     ],
     // 
     bodyAttrs: {
@@ -66,8 +74,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/composition-api.js',
-    '~/plugins/api.js'
+    // '~/plugins/composition-api.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
