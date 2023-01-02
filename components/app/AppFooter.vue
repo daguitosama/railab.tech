@@ -1,10 +1,8 @@
 <template>
     <footer class="mt-20 bg-gray-200 dark:bg-gray-800 relative">
-        <div>
-            <ContactShortcut />
-        </div>
+        <div></div>
         <FooterCurve />
-        <div class="container pt-144 md:pt-80 pb-20">
+        <div class="container pb-20 pt-10">
             <div class="mt-6 text-center sm:text-left flex justify-center">
                 <ul
                     class="space-y-10 sm:space-y-0 sm:flex sm:space-x-20 md:space-x-16"

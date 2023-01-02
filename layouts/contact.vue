@@ -8,7 +8,6 @@
         <main id="main-content" tabindex="0" class="focusable-on-visible">
             <slot />
         </main>
-        <ContactShortcut class="mt-[90px]" />
         <AppFooter />
     </div>
 </template>
