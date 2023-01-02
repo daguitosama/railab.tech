@@ -17,4 +17,4 @@ export const navigationLinks = [
         localePath: "about",
         bodyLocation: "footer.links.about.body",
     },
-]
+];
