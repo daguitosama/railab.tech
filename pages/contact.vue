@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <SectionContactItems items />
-            <ContactMap />
+            <!-- <ContactMap /> -->
         </div>
         <!-- <SectionContactForm class="py-32" /> -->
     </div>

@@ -18,11 +18,13 @@
                 </nuxt-link>
             </div>
             <!-- map -->
+            <!-- 
             <div class="w-full md:w-1/2 h-full p-6">
                 <div class="h-60 w-full relative">
                     <Map />
                 </div>
             </div>
+            -->
         </div>
     </section>
 </template>
