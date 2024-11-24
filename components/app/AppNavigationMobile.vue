@@ -7,7 +7,10 @@
                     :to="localePath('/')"
                     class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
                 >
-                    <Logo class="h-full" :title="$t('navigation.logo.title')" />
+                    <Logo
+                        class="w-full h-8"
+                        :title="$t('navigation.logo.title')"
+                    />
                 </nuxt-link>
             </div>
 
@@ -37,7 +40,7 @@
                                 :to="localePath('/')"
                                 class="h-6 flex items-baseline focus:outline-none focus:ring-4 focus:ring-primary-light dark:focus:ring-primary-dark rounded-lg"
                             >
-                                <Logo class="h-full" />
+                                <Logo class="w-full h-8" />
                             </nuxt-link>
                         </div>
                         <!-- links -->
